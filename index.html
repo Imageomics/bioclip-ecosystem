@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioCLIP Project Hub | Foundation Models for the Tree of Life</title>
+    <meta name="description" content="Central hub for the BioCLIP project, including BioCLIP 1, BioCLIP 2, pybioclip, and the Hugging Face collection. Find the right biological vision model for your research.">
+    
+    <style>
+        /* =========================================
+           1. DESIGN TOKENS & VARIABLES
+           ========================================= */
+        :root {
+            /* Color Palette - Scientific/Nature Theme */
+            --color-primary: #0f766e;       /* Teal for primary actions */
+            --color-primary-dark: #115e59;  /* Darker teal for hover states */
+            --color-secondary: #0ea5e9;     /* Sky blue for secondary accents */
+            --color-accent: #f59e0b;        /* Amber for highlights */
+            
+            /* Neutrals */
+            --color-bg-body: #f8fafc;       /* Light gray background */
+            --color-bg-card: #ffffff;       /* White for cards */
+            --color-text-main: #1e293b;     /* Dark slate for main text */
+            --color-text-muted: #64748b;    /* Muted slate for subtext */
+            --color-border: #e2e8f0;        /* Light border color */
+
+            /* Spacing & Sizing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+            --container-width: 1200px;
+            --border-radius: 8px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+
+            /* Typography */
+            --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            --font-mono: 'Consolas', 'Monaco', monospace;
+        }
+
+        /* =========================================
+           2. RESET & BASE STYLES
+           ========================================= */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--color-bg-body);
+            color: var(--color-text-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        a {
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--color-primary-dark);
+            text-decoration: underline;
+        }
+
+        /* =========================================
+           3. LAYOUT UTILITIES
+           ========================================= */
+        .container {
+            width: 90%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-sm);
+        }
+
+        .section {
+            padding: var(--spacing-lg) 0;
+        }
+
+        /* =========================================
+           4. HEADER & NAV
+           ========================================= */
+        .site-header {
+            background-color: var(--color-bg-card);
+            border-bottom: 1px solid var(--color-border);
+            padding: var(--spacing-sm) 0;
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* Simulating an icon */
+        .logo-icon {
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            border-radius: 4px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--spacing-md);
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--color-text-main);
+        }
+
+        .nav-links a:hover {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        /* =========================================
+           5. HERO SECTION
+           ========================================= */
+        .hero {
+            background: linear-gradient(to bottom, var(--color-bg-card), var(--color-bg-body));
+            text-align: center;
+            padding: 6rem 0 4rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: var(--spacing-sm);
+            letter-spacing: -0.02em;
+            background: -webkit-linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--color-text-muted);
+            max-width: 700px;
+            margin: 0 auto var(--spacing-md);
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: var(--spacing-sm);
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: white;
+            border: 2px solid var(--color-primary);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-primary-dark);
+            border-color: var(--color-primary-dark);
+            text-decoration: none;
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--color-text-main);
+            border: 2px solid var(--color-border);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+            text-decoration: none;
+            background-color: white;
+        }
+
+        /* =========================================
+           6. DECISION GUIDE (QUICK NAV)
+           ========================================= */
+        .decision-guide {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .guide-card {
+            background: var(--color-bg-card);
+            padding: var(--spacing-md);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--color-border);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .guide-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--color-primary);
+        }
+
+        .guide-icon {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-sm);
+            display: block;
+        }
+
+        .guide-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .guide-desc {
+            font-size: 0.95rem;
+            color: var(--color-text-muted);
+            margin-bottom: var(--spacing-sm);
+            flex-grow: 1;
+        }
+
+        .guide-link {
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* =========================================
+           7. DETAILED COMPONENT SECTIONS
+           ========================================= */
+        .component-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+            align-items: center;
+        }
+
+        /* Alternating layout for visual interest */
+        .component-row:nth-child(even) {
+            direction: rtl; /* Flip column order */
+        }
+        
+        .component-row:nth-child(even) .component-text {
+            direction: ltr; /* Reset text direction */
+        }
+
+        .component-image {
+            background-color: #e2e8f0;
+            height: 300px;
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #94a3b8;
+            font-size: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Placeholder gradients to simulate component screenshots */
+        .img-bioclip2 { background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; }
+        .img-bioclip1 { background: linear-gradient(135deg, #64748b 0%, #475569 100%); color: white; }
+        .img-pybioclip { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; }
+        .img-hf { background: linear-gradient(135deg, #FFD21E 0%, #263238 100%); color: white; }
+
+        .component-text h2 {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-text-main);
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            background-color: #e0f2fe;
+            color: #0369a1;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .tag.new { background-color: #dcfce7; color: #15803d; }
+        .tag.tool { background-color: #fef3c7; color: #b45309; }
+
+        .component-text p {
+            color: var(--color-text-muted);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .feature-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .feature-list li::before {
+            content: "•";
+            color: var(--color-primary);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .code-block {
+            background-color: #1e293b;
+            color: #e2e8f0;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            margin-bottom: var(--spacing-sm);
+            overflow-x: auto;
+        }
+
+        /* =========================================
+           8. FOOTER
+           ========================================= */
+        footer {
+            background-color: #1e293b;
+            color: white;
+            padding: var(--spacing-lg) 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+        }
+
+        .footer-col h4 {
+            margin-bottom: 1rem;
+            color: #e2e8f0;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* =========================================
+           9. RESPONSIVE QUERIES
+           ========================================= */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            
+            .component-row, 
+            .component-row:nth-child(even) {
+                grid-template-columns: 1fr;
+                direction: ltr; /* Stack vertically, keeping text readable */
+            }
+            
+            .component-image {
+                height: 200px;
+                order: -1; /* Image always on top on mobile */
+            }
+
+            .nav-links {
+                display: none; /* In a real project, this would be a hamburger menu */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <div class="logo-icon"></div>
+                BioCLIP Project
+            </a>
+            <nav class="nav-links">
+                <a href="#bioclip-2">BioCLIP 2</a>
+                <a href="#bioclip-1">BioCLIP</a>
+                <a href="#pybioclip">pybioclip</a>
+                <a href="#collection">Data & Models</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Vision Foundation Models<br>for the Tree of Life</h1>
+            <p>
+                Bridging computer vision and biology. BioCLIP models learn hierarchical representations 
+                of the natural world, enabling advanced species classification, trait prediction, and more.
+            </p>
+            <div class="hero-actions">
+                <a href="#guide" class="btn btn-primary">Choose Your Tool</a>
+                <a href="https://huggingface.co/collections/imageomics/bioclip" target="_blank" class="btn btn-outline">Explore Collection</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="guide" class="section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Which BioCLIP component do you need?</h2>
+            
+            <div class="decision-guide">
+                <div class="guide-card">
+                    <span class="guide-icon">🚀</span>
+                    <h3 class="guide-title">State-of-the-Art Accuracy</h3>
+                    <p class="guide-desc">I need the latest model with the highest accuracy (ViT-L) and emergent biological capabilities.</p>
+                    <a href="#bioclip-2" class="guide-link">Go to BioCLIP 2 &rarr;</a>
+                </div>
+
+                <div class="guide-card">
+                    <span class="guide-icon">🐍</span>
+                    <h3 class="guide-title">Easy Python Integration</h3>
+                    <p class="guide-desc">I want to use BioCLIP in my code without dealing with complex ML infrastructure.</p>
+                    <a href="#pybioclip" class="guide-link">Go to pybioclip &rarr;</a>
+                </div>
+
+                <div class="guide-card">
+                    <span class="guide-icon">📜</span>
+                    <h3 class="guide-title">Original & Cited</h3>
+                    <p class="guide-desc">I need the original ViT-B model described in the 2023 CVPR/arXiv paper.</p>
+                    <a href="#bioclip-1" class="guide-link">Go to BioCLIP 1 &rarr;</a>
+                </div>
+
+                <div class="guide-card">
+                    <span class="guide-icon">💾</span>
+                    <h3 class="guide-title">Raw Data & Models</h3>
+                    <p class="guide-desc">I want to download weights, datasets (TreeOfLife-10M/200M), or see demos.</p>
+                    <a href="#collection" class="guide-link">Go to HF Collection &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bioclip-2" class="section">
+        <div class="container">
+            <div class="component-row">
+                <div class="component-text">
+                    <span class="tag new">Latest Release</span>
+                    <h2>BioCLIP 2</h2>
+                    <p>
+                        The next generation of the model, scaled up to <strong>TreeOfLife-200M</strong>. BioCLIP 2 (ViT-L/14) improves species classification accuracy by over 18% compared to the original.
+                    </p>
+                    <p>
+                        Beyond simple classification, it exhibits emergent properties, such as distinguishing between life stages, sexes, and aligning embeddings with ecological traits like beak size.
+                    </p>
+                    <ul class="feature-list">
+                        <li><strong>Architecture:</strong> ViT-L/14 (Large)</li>
+                        <li><strong>Training Data:</strong> 214 Million images (TreeOfLife-200M)</li>
+                        <li><strong>Best for:</strong> High-accuracy tasks, fine-grained trait analysis, zero-shot learning.</li>
+                    </ul>
+                    <a href="https://imageomics.github.io/bioclip-2/" class="btn btn-primary">Visit BioCLIP 2 Site</a>
+                    <a href="https://huggingface.co/imageomics/bioclip-2" class="btn btn-outline" style="margin-left: 10px;">Model Card</a>
+                </div>
+                <div class="component-image img-bioclip2">
+                    BioCLIP 2 Visualization
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pybioclip" class="section" style="background-color: #f1f5f9;">
+        <div class="container">
+            <div class="component-row">
+                <div class="component-text">
+                    <span class="tag tool">Developer Tool</span>
+                    <h2>pybioclip</h2>
+                    <p>
+                        A user-friendly Python package and command-line tool designed to make BioCLIP models accessible to everyone, regardless of ML expertise.
+                    </p>
+                    <p>
+                        It handles preprocessing, model downloading, and batch optimization automatically.
+                    </p>
+                    <div class="code-block">
+                        pip install pybioclip<br>
+                        bioclip predict my_image.jpg
+                    </div>
+                    <ul class="feature-list">
+                        <li>Simple command-line interface (CLI).</li>
+                        <li>Python API for custom scripts.</li>
+                        <li>Optimized for batch processing of large image sets.</li>
+                    </ul>
+                    <a href="https://imageomics.github.io/pybioclip/" class="btn btn-primary">Read Documentation</a>
+                    <a href="https://github.com/Imageomics/pybioclip" class="btn btn-outline" style="margin-left: 10px;">View on GitHub</a>
+                </div>
+                <div class="component-image img-pybioclip">
+                    pybioclip CLI
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bioclip-1" class="section">
+        <div class="container">
+            <div class="component-row">
+                <div class="component-text">
+                    <span class="tag">Original Model</span>
+                    <h2>BioCLIP (Original)</h2>
+                    <p>
+                        The original foundation model presented in "BioCLIP: A Vision Foundation Model for the Tree of Life". It established the standard for using CLIP architectures in organismal biology.
+                    </p>
+                    <p>
+                        Trained on the TreeOfLife-10M dataset, it covers over 450,000 taxa and learns a hierarchical representation that aligns with the biological taxonomy.
+                    </p>
+                    <ul class="feature-list">
+                        <li><strong>Architecture:</strong> ViT-B/16 (Base)</li>
+                        <li><strong>Training Data:</strong> 10 Million images</li>
+                        <li><strong>Best for:</strong> General purpose baselines, reproducing original paper results.</li>
+                    </ul>
+                    <a href="https://imageomics.github.io/bioclip/" class="btn btn-primary">Visit BioCLIP 1 Site</a>
+                    <a href="https://arxiv.org/abs/2311.18803" class="btn btn-outline" style="margin-left: 10px;">Read Paper</a>
+                </div>
+                <div class="component-image img-bioclip1">
+                    BioCLIP 1 Structure
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="collection" class="section" style="background-color: #f1f5f9;">
+        <div class="container">
+            <div class="component-row">
+                <div class="component-text">
+                    <span class="tag tool">Repository</span>
+                    <h2>Hugging Face Collection</h2>
+                    <p>
+                        The central warehouse for all BioCLIP assets. This collection aggregates all versions of the models, the training datasets, and interactive demos.
+                    </p>
+                    <p>
+                        Use this if you need direct access to raw model weights (SafeTensors/PyTorch) or want to download the massive TreeOfLife datasets.
+                    </p>
+                    <ul class="feature-list">
+                        <li><strong>Models:</strong> BioCLIP 1, BioCLIP 2, BioCLIP-iNat.</li>
+                        <li><strong>Datasets:</strong> TreeOfLife-10M, TreeOfLife-200M, Rare Species.</li>
+                        <li><strong>Demos:</strong> Interactive Gradio apps for zero-shot classification.</li>
+                    </ul>
+                    <a href="https://huggingface.co/collections/imageomics/bioclip" class="btn btn-primary">Browse Collection</a>
+                </div>
+                <div class="component-image img-hf">
+                    🤗 Hugging Face Collection
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h4>BioCLIP Project</h4>
+                <p style="color: #94a3b8; max-width: 300px;">
+                    Developing foundation models to accelerate biological discovery and conservation through computer vision.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="https://imageomics.github.io/bioclip-2/">BioCLIP 2</a></li>
+                    <li><a href="https://imageomics.github.io/bioclip/">BioCLIP 1</a></li>
+                    <li><a href="https://imageomics.github.io/pybioclip/">pybioclip Docs</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Community</h4>
+                <ul class="footer-links">
+                    <li><a href="https://github.com/Imageomics">Imageomics GitHub</a></li>
+                    <li><a href="https://huggingface.co/imageomics">Hugging Face Profile</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container" style="border-top: 1px solid #334155; margin-top: 2rem; padding-top: 1rem; text-align: center; color: #64748b; font-size: 0.875rem;">
+            &copy; 2025 BioCLIP Project. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
