@@ -1,0 +1,34 @@
+/* =========================================
+   DESIGN TOKENS & VARIABLES
+   ========================================= */
+:root {
+    /* Color Palette - Scientific/Nature Theme */
+    --color-primary: #0f766e;       /* Teal for primary actions */
+    --color-primary-dark: #115e59;  /* Darker teal for hover states */
+    --color-secondary: #0ea5e9;     /* Sky blue for secondary accents */
+    --color-accent: #f59e0b;        /* Amber for highlights */
+    
+    /* Neutrals */
+    --color-bg-body: #f8fafc;       /* Light gray background */
+    --color-bg-card: #ffffff;       /* White for cards */
+    --color-text-main: #1e293b;     /* Dark slate for main text */
+    --color-text-muted: #64748b;    /* Muted slate for subtext */
+    --color-border: #e2e8f0;        /* Light border color */
+
+    /* Spacing & Sizing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --container-width: 1200px;
+    --border-radius: 8px;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+
+    /* Typography */
+    --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --font-mono: 'Consolas', 'Monaco', monospace;
+}
