@@ -260,10 +260,10 @@ a:hover {
 }
 
 /* Placeholder gradients */
-.img-bioclip2 { background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; }
-.img-bioclip1 { background: linear-gradient(135deg, #64748b 0%, #475569 100%); color: white; }
-.img-pybioclip { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; }
-.img-hf { background: linear-gradient(135deg, #FFD21E 0%, #263238 100%); color: white; }
+.img-bioclip2 { background: #10b98143; }
+.img-bioclip { background: #0097b288; }
+.img-pybioclip { background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; }
+.img-hf { background: linear-gradient(135deg, #FFD21E 0%, var(--color-secondary) 100%); color: white; }
 
 .component-text h2 {
     font-size: 2rem;
@@ -274,7 +274,7 @@ a:hover {
 .tag {
     display: inline-block;
     padding: 0.25rem 0.5rem;
-    background-color: #e0f2fe;
+    background-color: #0097b241;
     color: #0369a1;
     border-radius: 4px;
     font-size: 0.75rem;
@@ -284,7 +284,7 @@ a:hover {
     margin-bottom: var(--spacing-sm);
 }
 
-.tag.new { background-color: #dcfce7; color: #15803d; }
+.tag.new { background-color: #10b98143; color: #059669; }
 .tag.tool { background-color: #fef3c7; color: #b45309; }
 
 .component-text p {
