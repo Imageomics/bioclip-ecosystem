@@ -50,6 +50,11 @@
 
     // Load components
     async function loadComponents() {
+        // Safety timeout: Ensure page is visible after 3s even if loading hangs
+        const safetyTimeout = setTimeout(() => {
+            document.body.style.visibility = 'visible';
+        }, 3000);
+
         try {
             const [headerResponse, footerResponse] = await Promise.all([
                 fetch(componentsPath + 'header.html'),
@@ -74,10 +79,10 @@
             document.body.insertBefore(headerElement.firstElementChild, document.body.firstChild);
             document.body.appendChild(footerElement.firstElementChild);
 
-            document.body.style.visibility = 'visible';
-
         } catch (error) {
             console.error('Error loading components:', error);
+        } finally {
+            clearTimeout(safetyTimeout);
             document.body.style.visibility = 'visible';
         }
     }
