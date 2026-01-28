@@ -15,6 +15,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    visibility: hidden;
+    /* Hidden until components load to prevent FOUC */
 }
 
 a {
@@ -49,8 +51,13 @@ a:hover {
 }
 
 /* Utility classes for spacing and bg */
-.ml-2 { margin-left: 10px; }
-.bg-light { background-color: #f1f5f9; }
+.ml-2 {
+    margin-left: 10px;
+}
+
+.bg-light {
+    background-color: #f1f5f9;
+}
 
 /* =========================================
    3. HEADER & NAV
@@ -97,7 +104,8 @@ a:hover {
     color: var(--color-text-main);
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--color-primary);
     text-decoration: none;
 }
@@ -117,6 +125,7 @@ a:hover {
     margin-bottom: var(--spacing-sm);
     letter-spacing: -0.02em;
     background: -webkit-linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -238,11 +247,13 @@ a:hover {
 
 /* Alternating layout for visual interest */
 .component-row:nth-child(even) {
-    direction: rtl; /* Flip column order */
+    direction: rtl;
+    /* Flip column order */
 }
 
 .component-row:nth-child(even) .component-text {
-    direction: ltr; /* Reset text direction */
+    direction: ltr;
+    /* Reset text direction */
 }
 
 .component-image {
@@ -260,10 +271,23 @@ a:hover {
 }
 
 /* Placeholder gradients */
-.img-bioclip2 { background: #10b98143; }
-.img-bioclip { background: #0097b288; }
-.img-pybioclip { background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; }
-.img-hf { background: linear-gradient(135deg, #FFD21E 0%, var(--color-secondary) 100%); color: white; }
+.img-bioclip2 {
+    background: #10b98143;
+}
+
+.img-bioclip {
+    background: #0097b288;
+}
+
+.img-pybioclip {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+}
+
+.img-hf {
+    background: linear-gradient(135deg, #FFD21E 0%, var(--color-secondary) 100%);
+    color: white;
+}
 
 .component-text h2 {
     font-size: 2rem;
@@ -284,8 +308,15 @@ a:hover {
     margin-bottom: var(--spacing-sm);
 }
 
-.tag.new { background-color: #10b98143; color: #059669; }
-.tag.tool { background-color: #fef3c7; color: #b45309; }
+.tag.new {
+    background-color: #10b98143;
+    color: #059669;
+}
+
+.tag.tool {
+    background-color: #fef3c7;
+    color: #b45309;
+}
 
 .component-text p {
     color: var(--color-text-muted);
@@ -380,20 +411,25 @@ footer {
    8. RESPONSIVE QUERIES
    ========================================= */
 @media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
-    
-    .component-row, 
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .component-row,
     .component-row:nth-child(even) {
         grid-template-columns: 1fr;
-        direction: ltr; /* Stack vertically, keeping text readable */
+        direction: ltr;
+        /* Stack vertically, keeping text readable */
     }
-    
+
     .component-image {
         height: 200px;
-        order: -1; /* Image always on top on mobile */
+        order: -1;
+        /* Image always on top on mobile */
     }
 
     .nav-links {
-        display: none; /* In a real project, this would be a hamburger menu */
+        display: none;
+        /* In a real project, this would be a hamburger menu */
     }
 }
