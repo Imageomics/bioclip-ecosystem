@@ -1,10 +1,126 @@
 <!--
 TODO: Add BioCLIP associated software:
-- pybioclip
-- TreeOfLife-Toolbox
-- TaxonoPy
-- Distributed Downloader
+- ✓ pybioclip 
+- ✓ TreeOfLife-Toolbox
+- ✓ TaxonoPy
+- ✓ Distributed Downloader
 - BioCLIP App
 - emb_explorer
 - bioclip vector DB
 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioCLIP Software | Tools and Applications</title>
+    <meta name="description" content="Explore software tools and applications in the BioCLIP ecosystem.">
+
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png"
+        href="https://github.com/Imageomics/Imageomics-guide/raw/3478acc0068a87a5604069d04a29bdb0795c2045/docs/logos/Imageomics_logo_butterfly.png">
+    <script src="../js/load-components.js" defer></script>
+</head>
+
+<body>
+
+    <section class="hero">
+        <div class="container">
+            <h1>BioCLIP Software</h1>
+            <p>
+                Tools and applications for working with BioCLIP models, from simple Python packages
+                to large-scale data processing pipelines.
+            </p>
+        </div>
+    </section>
+
+    <section id="pybioclip" class="section">
+        <div class="container">
+            <div class="component-row">
+                <div class="component-text">
+                    <span class="tag tool">Developer Tool</span>
+                    <h2>pybioclip</h2>
+                    <p>
+                        A user-friendly Python package and command-line tool designed to make BioCLIP models accessible
+                        to everyone, regardless of ML expertise.
+                        pybioclip provides easy-to-use interfaces for taxonomic classification, custom label prediction,
+                        and image embedding generation through your choice of BioCLIP model.
+                        This can be accomplished through either a command-line interface (CLI) or a Python API for
+                        custom scripts.
+                    </p>
+                    <a href="https://imageomics.github.io/pybioclip/" class="btn btn-primary">Read Documentation</a>
+                    <a href="https://github.com/Imageomics/pybioclip" class="btn btn-outline ml-2">View on GitHub</a>
+                </div>
+                <div class="component-image img-pybioclip">
+                    pybioclip CLI
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="treeoflife-toolbox" class="section bg-light">
+        <div class="container">
+            <div class="component-row">
+                <div class="component-text">
+                    <span class="tag tool">Data Processing</span>
+                    <h2>TreeOfLife-Toolbox</h2>
+                    <p>
+                        Source-specific tools for processing data (images) downloaded using distributed downloader and
+                        relies on MPI. This repository contains tools used in creating the TreeOfLife-200M dataset.
+                    </p>
+                    <a href="https://github.com/Imageomics/TreeOfLife-toolbox" class="btn btn-primary">View on GitHub</a>
+                </div>
+                <div class="component-image">
+                    TreeOfLife Processing Tools
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="taxonompy" class="section">
+        <div class="container">
+            <div class="component-row">
+                <div class="component-text">
+                    <span class="tag tool">Taxonomy</span>
+                    <h2>TaxonoPy</h2>
+                    <p>
+                        A Python package for efficiently aligning organismal taxonomic hierarchies using the Global
+                        Names Verifier. The motivation for this package is to create an internally consistent and
+                        standardized classification set for organisms in large biodiversity datasets composed from different data providers.
+                    </p>
+                    <a href="https://github.com/Imageomics/TaxonoPy" class="btn btn-primary">View on GitHub</a>
+                </div>
+                <div class="component-image">
+                    Taxonomy Standardization
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="distributed-downloader" class="section bg-light">
+        <div class="container">
+            <div class="component-row">
+                <div class="component-text">
+                    <span class="tag tool">Infrastructure</span>
+                    <h2>Distributed Downloader</h2>
+                    <p>
+                        An MPI-based distributed downloading tool for retrieving data from diverse domains.
+                        Initially developed to handle the massive scale of downloading all images from the monthly GBIF
+                        occurrence snapshot, which contains approximately 200 million images distributed across 545 servers.
+                    </p>
+                    <a href="https://github.com/Imageomics/distributed-downloader" class="btn btn-primary">View on
+                        GitHub</a>
+                </div>
+                <div class="component-image">
+                    Distributed Download System
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
