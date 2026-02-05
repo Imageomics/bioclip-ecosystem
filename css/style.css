@@ -208,10 +208,18 @@ a:hover {
 }
 
 .guide-icon {
-    font-size: 2rem;
-    margin-bottom: var(--spacing-sm);
     display: block;
+    color: var(--color-primary);
+    margin-bottom: 0.75rem;
 }
+
+.guide-icon svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+
+
 
 .guide-title {
     font-size: 1.1rem;
