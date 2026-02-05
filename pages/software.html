@@ -23,6 +23,7 @@ TODO: Add BioCLIP associated software:
     <link rel="icon" type="image/png"
         href="https://github.com/Imageomics/Imageomics-guide/raw/3478acc0068a87a5604069d04a29bdb0795c2045/docs/logos/Imageomics_logo_butterfly.png">
     <script src="../js/load-components.js" defer></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
@@ -55,7 +56,10 @@ TODO: Add BioCLIP associated software:
                     <a href="https://github.com/Imageomics/pybioclip" class="btn btn-outline ml-2">View on GitHub</a>
                 </div>
                 <div class="component-image img-pybioclip">
-                    pybioclip CLI
+                    <div class="icon-display">
+                        <i data-lucide="terminal" class="icon-large"></i>
+                        <span class="icon-label">Python CLI</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -73,14 +77,17 @@ TODO: Add BioCLIP associated software:
                     </p>
                     <a href="https://github.com/Imageomics/TreeOfLife-toolbox" class="btn btn-primary">View on GitHub</a>
                 </div>
-                <div class="component-image">
-                    TreeOfLife Processing Tools
+                <div class="component-image img-treeoflife-toolbox">
+                    <div class="icon-display">
+                        <i data-lucide="wrench" class="icon-large"></i>
+                        <span class="icon-label">Data Tools</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="taxonompy" class="section">
+    <section id="taxonopy" class="section">
         <div class="container">
             <div class="component-row">
                 <div class="component-text">
@@ -93,8 +100,8 @@ TODO: Add BioCLIP associated software:
                     </p>
                     <a href="https://github.com/Imageomics/TaxonoPy" class="btn btn-primary">View on GitHub</a>
                 </div>
-                <div class="component-image">
-                    Taxonomy Standardization
+                <div class="component-image img-taxonopy">
+                    <img src="../images/taxonopy_logo.svg" alt="TaxonoPy logo" loading="lazy" class="tool-logo">
                 </div>
             </div>
         </div>
@@ -114,13 +121,19 @@ TODO: Add BioCLIP associated software:
                     <a href="https://github.com/Imageomics/distributed-downloader" class="btn btn-primary">View on
                         GitHub</a>
                 </div>
-                <div class="component-image">
-                    Distributed Download System
+                <div class="component-image img-distributed-downloader">
+                    <div class="icon-display">
+                        <i data-lucide="cloud-download" class="icon-large"></i>
+                        <span class="icon-label">MPI Downloader</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+<script>
+    lucide.createIcons();
+</script>
 </body>
 
 </html>

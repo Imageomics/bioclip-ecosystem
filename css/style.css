@@ -289,6 +289,54 @@ a:hover {
     color: white;
 }
 
+/* Software page component backgrounds */
+.img-treeoflife-toolbox {
+    background: linear-gradient(135deg, #16a34a 0%, #22c55e 50%, #4ade80 100%);
+}
+
+.img-taxonopy {
+    background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 50%, #0ea5e9 100%);
+}
+
+.img-distributed-downloader {
+    background: linear-gradient(135deg, #4338ca 0%, #6366f1 50%, #818cf8 100%);
+}
+
+/* Icon display for component images */
+.icon-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.icon-large {
+    width: 80px;
+    height: 80px;
+    stroke-width: 1.5;
+    color: rgba(255, 255, 255, 0.95);
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+}
+
+.icon-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.02em;
+}
+
+/* Tool logo styling */
+.tool-logo {
+    max-width: 70%;
+    max-height: 70%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.15));
+}
+
 .component-text h2 {
     font-size: 2rem;
     margin-bottom: var(--spacing-sm);
