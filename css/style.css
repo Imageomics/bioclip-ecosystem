@@ -37,7 +37,6 @@ a:hover {
     width: 90%;
     max-width: var(--container-width);
     margin: 0 auto;
-    padding: 0 var(--spacing-sm);
 }
 
 .section {
@@ -248,7 +247,7 @@ a:hover {
 .component-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-lg);
+    gap: 3rem;
     margin-bottom: var(--spacing-lg);
     align-items: center;
 }
@@ -276,6 +275,27 @@ a:hover {
     font-size: 1.5rem;
     position: relative;
     overflow: hidden;
+}
+
+.demo-screenshot {
+    height: auto;
+    min-height: auto;
+    background-color: transparent;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+.demo-screenshot img {
+    max-width: 700px;
+    width: auto;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border: 1px solid #cbd5e1;
+    object-fit: contain;
 }
 
 /* Placeholder gradients */
