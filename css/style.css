@@ -456,6 +456,17 @@ footer {
         /* Image always on top on mobile */
     }
 
+    .demo-screenshot {
+        padding: 0.5rem 0;
+        min-height: auto;
+    }
+
+    .demo-screenshot img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+
     .nav-links {
         display: none;
         /* In a real project, this would be a hamburger menu */
