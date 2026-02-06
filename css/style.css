@@ -371,6 +371,22 @@ a:hover {
     margin-bottom: var(--spacing-sm);
 }
 
+.component-text ul {
+    margin-left: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text-muted);
+}
+
+.component-text ul li {
+    color: var(--color-text-muted);
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.component-text ul li strong {
+    color: var(--color-text-muted);
+}
+
 .feature-list {
     list-style: none;
     margin-bottom: var(--spacing-md);

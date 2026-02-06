@@ -115,8 +115,18 @@ TODO: Add BioCLIP associated software:
                     <h2>Distributed Downloader</h2>
                     <p>
                         An MPI-based distributed downloading tool for retrieving data from diverse domains.
-                        Initially developed to handle the massive scale of downloading all images from the monthly [Global Biodiversity Information Facility (GBIF)](https://www.gbif.org/)
+                        Initially developed to handle the massive scale of downloading all images from the monthly <a href="https://www.gbif.org/" target="_blank">Global Biodiversity Information Facility (GBIF)</a>
                         occurrence snapshot. It was used for the May 2024 snapshot which contained approximately 200 million images distributed across 545 servers.
+                    </p>
+                    <p>
+                        Key Features:
+                    <ul>
+                        <li><strong>Server-friendly operation:</strong> Implements sophisticated rate limiting to avoid overloading source servers</li>
+                        <li><strong>Enhanced control:</strong> Provides fine-grained control over dataset construction and metadata management</li>
+                        <li><strong>Scalability:</strong> Handles massive datasets that exceed the capabilities of single-machine solutions</li>
+                        <li><strong>Fault tolerance:</strong> Robust checkpoint and recovery system for long-running downloads</li>
+                        <li><strong>Flexibility:</strong> Supports diverse output formats and custom processing pipelines</li>
+                    </ul>
                     </p>
                     <a href="https://github.com/Imageomics/distributed-downloader" class="btn btn-primary">View on
                         GitHub</a>
