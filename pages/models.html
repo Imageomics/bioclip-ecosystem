@@ -42,7 +42,8 @@
                 <div class="guide-card">
                     <span class="guide-icon">📃</span>
                     <h3 class="guide-title">Trained with Captions</h3>
-                    <p class="guide-desc">I want to try BioCAP, the original BioCLIP ViT-B model, but trained with captions and taxonomic labels.</p>
+                    <p class="guide-desc">I need a ViT-B/16 model for inference speed or direct comparison; looking for base model trained with captions and taxonomic labels.</p>
+                    <!--want to try BioCAP, the original BioCLIP model, but trained with captions and taxonomic labels-->
                     <a href="#biocap" class="guide-link">Go to BioCAP &rarr;</a>
                 </div>
                 <div class="guide-card">
@@ -84,7 +85,7 @@
                     <a href="https://doi.org/10.48550/arXiv.2505.23883" class="btn btn-outline ml-2">Read Paper</a>
                 </div>
                 <div class="component-image img-bioclip2">
-                    <img src="../images/bioclip2-ogimage.png" alt="BioCLIP 2 model visualization showing the model architecture, a clustered embedding plot with organism thumbnails, showing the separation by age and sex orthogonal to the species axis" loading="lazy" style="max-width:100%;height:auto;display:block;object-fit:contain;">
+                    <img src="../images/bioclip2-ogimage.png" alt="BioCLIP 2 model visualization showing the model architecture, a clustered embedding plot with organism thumbnails, showing the separation by age and sex orthogonal to the species axis" loading="lazy" style="max-width:100%;max-height:100%;display:block;object-fit:contain;">
                 </div>
             </div>
         </div>
@@ -97,26 +98,23 @@
                     <span class="tag tool">Trained with Captions</span>
                     <h2>BioCAP</h2>
                     <p>
-                        A user-friendly Python package and command-line tool designed to make BioCLIP models accessible to everyone, regardless of ML expertise.
-                        pybioclip provides easy-to-use interfaces for taxonomic classification, custom label prediction, and image embedding generation through your choice of BioCLIP model.
-                        This can be accomplished through either a command-line interface (CLI) or a Python API for custom scripts.
+                        BioCAP introduces descriptive captions to the original BioCLIP training regimen as complementary supervision, aligning visual and textual representations within the latent morphospace of species. This added context improves performance by <b>+8.8%</b> on classification and <b>+21.3%</b> on retrieval, demonstrating that descriptive language enriches biological foundation models beyond labels.
                     </p>
                     <p>
-                        Key features include:
-                        <ul class="feature-list">
-                            <li><b>Taxonomic label prediction</b> for images across ranks in the Linnaean hierarchy (tunable from kingdom to species).</li>
-                            <li><b>Custom label predictions</b> from user-supplied classification categories.</li>
-                            <li><b>Image embedding generation</b> in a text-aligned feature space.</li>
-                            <li><b>Batch image processing</b> with performance optimizations.</li>
-                            <li><b>Containers</b> provided to simplify use in computational pipelines.</li>
-                        </ul>
+                        Trained on the TreeOfLife-10M dataset paired with TreeOfLife-10M Captions, providing synthetic, trait-rich captions generated based on morphological context and taxon-specific examples, it covers over 390,000 taxa and learns a hierarchical representation that aligns with the biological taxonomy.
                     </p>
+                    <ul class="feature-list">
+                        <li><strong>Architecture:</strong> ViT-B/16 (Base)</li>
+                        <li><strong>Training Data:</strong> 10 Million images (TreeOfLife-10M) with associated taxonomic and morphological context-based synthetic captions (TreeOfLife-10M Captions)</li>
+                        <li><strong>Best for:</strong> General purpose baselines (ViT-B/16 needed, for inference speed or direct comparison), caption generation pipelines, reproducing paper results.
+                        </li>
+                    </ul>
                     <a href="https://imageomics.github.io/biocap/" class="btn btn-primary">Visit BioCAP Site</a>
                     <a href="https://huggingface.co/imageomics/biocap" class="btn btn-outline ml-2">Model Card</a>
                     <a href="https://arxiv.org/abs/2510.20095" class="btn btn-outline ml-2">Read Paper</a>
                 </div>
                 <div class="component-image img-biocap">
-                    <img src="../images/biocap-ogimage.png" alt="BioCAP model visualization showing the caption generation process, a clustered embedding plot with organism thumbnails, showing the separation by sex orthogonal to the 'fly' axis" loading="lazy" style="max-height:100%;width:auto;display:block;object-fit:contain;">
+                    <img src="../images/biocap-ogimage.png" alt="BioCAP model visualization showing the caption generation process, a clustered embedding plot with organism thumbnails, showing the separation by sex orthogonal to the 'fly' axis" loading="lazy" style="max-width:100%;max-height:100%;display:block;object-fit:contain;">
                 </div>
             </div>
         </div>
@@ -136,15 +134,15 @@
                     </p>
                     <ul class="feature-list">
                         <li><strong>Architecture:</strong> ViT-B/16 (Base)</li>
-                        <li><strong>Training Data:</strong> 10 Million images</li>
-                        <li><strong>Best for:</strong> General purpose baselines, reproducing original paper results.</li>
+                        <li><strong>Training Data:</strong> 10 Million images (TreeOfLife-10M)</li>
+                        <li><strong>Best for:</strong> Reproducing original paper results.</li>
                     </ul>
                     <a href="https://imageomics.github.io/bioclip/" class="btn btn-primary">Visit BioCLIP Site</a>
                     <a href="https://huggingface.co/imageomics/bioclip" class="btn btn-outline ml-2">Model Card</a>
-                    <a href="https://arxiv.org/abs/2311.18803" class="btn btn-outline ml-2">Read Paper</a>
+                    <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Stevens_BioCLIP_A_Vision_Foundation_Model_for_the_Tree_of_Life_CVPR_2024_paper.html" class="btn btn-outline ml-2">Read Paper</a>
                 </div>
                 <div class="component-image img-bioclip">
-                    <img src="../images/bioclip-hook.svg" alt="BioCLIP model visualization showing the model architecture" loading="lazy" style="max-width:100%;height:auto;display:block;object-fit:contain;">
+                    <img src="../images/bioclip-hook.svg" alt="BioCLIP model visualization showing the model architecture" loading="lazy" style="max-width:100%;max-height:100%;display:block;object-fit:contain;">
                 </div>
             </div>
         </div>
@@ -164,7 +162,8 @@
                     </p>
                     <ul class="feature-list">
                         <li><strong>Models:</strong> BioCLIP, BioCLIP 2, BioCAP.</li>
-                        <li><strong>Datasets:</strong> TreeOfLife-200M, TreeOfLife-10M, TreeOfLife-10M Captions, Rare Species, IDLE-OO Camera Traps.</li>
+                        <li><strong>Datasets:</strong> TreeOfLife-200M, TreeOfLife-10M, TreeOfLife-10M Captions.</li>
+                        <li><strong>Benchmarks:</strong> Rare Species, IDLE-OO Camera Traps.</li>
                         <li><strong>Demos:</strong> Interactive Gradio apps for zero-shot and open-ended classification.</li>
                     </ul>
                     <a href="https://huggingface.co/collections/imageomics/bioclip" class="btn btn-primary">Browse Collection</a>
