@@ -587,25 +587,14 @@ footer {
     transition: all 0.2s ease;
 }
 
-.paper-link-arxiv {
-    background-color: #b31b1b;
+.paper-link-doc {
+    background-color: #92991c;
     color: white;
 }
 
-.paper-link-arxiv:hover {
-    background-color: #8b1515;
+.paper-link-doc:hover {
+    background-color: #9bcb5e;
     color: white;
-    text-decoration: none;
-}
-
-.paper-link-doi {
-    background-color: #fcce24;
-    color: #1a1a1a;
-}
-
-.paper-link-doi:hover {
-    background-color: #e5b91d;
-    color: #1a1a1a;
     text-decoration: none;
 }
 
@@ -616,17 +605,6 @@ footer {
 
 .paper-link-site:hover {
     background-color: var(--color-primary-dark);
-    color: white;
-    text-decoration: none;
-}
-
-.paper-link-code {
-    background-color: #24292e;
-    color: white;
-}
-
-.paper-link-code:hover {
-    background-color: #1b1f23;
     color: white;
     text-decoration: none;
 }
