@@ -37,7 +37,6 @@ a:hover {
     width: 90%;
     max-width: var(--container-width);
     margin: 0 auto;
-    padding: 0 var(--spacing-sm);
 }
 
 .section {
@@ -208,10 +207,18 @@ a:hover {
 }
 
 .guide-icon {
-    font-size: 2rem;
-    margin-bottom: var(--spacing-sm);
     display: block;
+    color: var(--color-primary);
+    margin-bottom: 0.75rem;
 }
+
+.guide-icon svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+
+
 
 .guide-title {
     font-size: 1.1rem;
@@ -240,7 +247,7 @@ a:hover {
 .component-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-lg);
+    gap: 3rem;
     margin-bottom: var(--spacing-lg);
     align-items: center;
 }
@@ -268,6 +275,27 @@ a:hover {
     font-size: 1.5rem;
     position: relative;
     overflow: hidden;
+}
+
+.demo-screenshot {
+    height: auto;
+    min-height: auto;
+    background-color: transparent;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+.demo-screenshot img {
+    max-width: 700px;
+    width: auto;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border: 1px solid #cbd5e1;
+    object-fit: contain;
 }
 
 /* Placeholder gradients */
@@ -627,6 +655,17 @@ p {
         height: 200px;
         order: -1;
         /* Image always on top on mobile */
+    }
+
+    .demo-screenshot {
+        padding: 0.5rem 0;
+        min-height: auto;
+    }
+
+    .demo-screenshot img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
     }
 
     .nav-links {

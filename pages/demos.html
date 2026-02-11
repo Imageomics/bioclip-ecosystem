@@ -1,5 +1,83 @@
-<!--
-TODO: Add BioCLIP Demos:
-- BioCLIP 2
-- BioCLIP
--->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demos | BioCLIP Ecosystem</title>
+    <meta name="description" content="Try BioCLIP models in your browser with interactive Gradio demos for species classification and image analysis.">
+    
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="https://github.com/Imageomics/Imageomics-guide/raw/3478acc0068a87a5604069d04a29bdb0795c2045/docs/logos/Imageomics_logo_butterfly.png">
+    <script src="https://unpkg.com/lucide@0.563.0"></script>
+    <script src="../js/load-components.js" defer></script>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Interactive Demos</h1>
+            <p>
+                Try BioCLIP models directly in your browser. Upload images to classify species using zero-shot or open-ended methods.
+            </p>
+        </div>
+    </section>
+
+    <section id="demos" class="section">
+        <div class="container">
+            <div class="decision-guide">
+                <div class="guide-card">
+                    <span class="guide-icon"><i data-lucide="sparkles"></i></span>
+                    <span class="tag new">Latest</span>
+                    <h3 class="guide-title">BioCLIP 2 Demo</h3>
+                    <p class="guide-desc">
+                        Identify species and classify images using open-ended or zero-shot methods with the latest BioCLIP 2 model trained on 214 million images.
+                    </p>
+                    <a href="https://huggingface.co/spaces/imageomics/bioclip-2-demo" target="_blank" class="btn btn-primary">Launch Demo &rarr;</a>
+                </div>
+
+                <div class="guide-card">
+                    <span class="guide-icon"><i data-lucide="scan-search"></i></span>
+                    <span class="tag">Original</span>
+                    <h3 class="guide-title">BioCLIP Demo</h3>
+                    <p class="guide-desc">
+                        Classify images of organisms across plant, animal, and fungal species using the original BioCLIP model with taxonomic predictions.
+                    </p>
+                    <a href="https://huggingface.co/spaces/imageomics/bioclip-demo" target="_blank" class="btn btn-primary">Launch Demo &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">How to Use the Demos</h2>
+            <div class="component-row">
+                <div class="component-text">
+                    <h3>Getting Started</h3>
+                    <p>
+                        Our demos are hosted on Hugging Face Spaces and powered by Gradio, making them easy to use directly in your browser without any installation.
+                    </p>
+                    <ul class="feature-list">
+                        <li><strong>Upload an image</strong> – Drag and drop or click to upload any image of an organism.</li>
+                        <li><strong>Choose classification mode</strong> – Select zero-shot (with custom labels) or open-ended (taxonomic hierarchy) classification.</li>
+                        <li><strong>View predictions</strong> – See the model's predictions with confidence scores across taxonomic ranks.</li>
+                        <li><strong>Compare to predicted taxon</strong> - In open-ended classification, compare your image to a random sample image of the predicted taxon from the training data. Follow the provided source link to learn more about it.</li>
+                    </ul>
+                    <p>
+                        For programmatic access or batch processing, check out <a href="./software.html#pybioclip">pybioclip</a>.
+                    </p>
+                </div>
+                <div class="component-image demo-screenshot">
+                    <img src="../images/demo-example.png" alt="BioCLIP Demo Interface">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
