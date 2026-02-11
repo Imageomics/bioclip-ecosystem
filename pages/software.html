@@ -104,8 +104,18 @@ TODO: Add BioCLIP associated software:
                     <h2>TaxonoPy</h2>
                     <p>
                         A Python package for efficiently aligning organismal taxonomic hierarchies using the <a href="https://verifier.globalnames.org">Global
-                        Names Verifier</a>. The motivation for this package is to create an internally consistent and
-                        standardized classification set for organisms in large biodiversity datasets from multiple data providers.
+                        Names Verifier</a>. TaxonoPy resolves massive taxonomic datasets, aligning to a single source taxonomy for uniformity. 
+                        The motivation for this package is to create an internally consistent and standardized classification set for organisms 
+                        in large biodiversity datasets composed from different data providers.
+                    </p>
+                    <p>
+                        Key Features:
+                        <ul class="feature-list">
+                            <li><b>Automatically resolve inconsistencies</b> between source taxonomies (e.g. kingdom Metazoa vs. Animalia).</li>
+                            <li><b>Complete records</b> missing one or more ranks where the chosen authority has it defined.</li>
+                            <li><b>Resolve ambiguities:</b> homonyms, synonyms, and other terms that can be interpreted in multiple ways unless handled systematically.</li>
+                            <li><b>Inspect resolution</b> decisions (and failures).</li>
+                        </ul>
                     </p>
                     <a href="https://github.com/Imageomics/TaxonoPy" class="btn btn-primary">View on GitHub</a>
                 </div>
