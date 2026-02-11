@@ -538,9 +538,14 @@ footer {
     color: #1d4ed8;
 }
 
-.paper-venue.preprint {
+.paper-venue.iclr {
     background-color: #f3e8ff;
     color: #7c3aed;
+}
+
+.paper-venue.neurips {
+    background-color: #d1fae5;
+    color: #059669;
 }
 
 .paper-title {
