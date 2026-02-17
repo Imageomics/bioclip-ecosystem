@@ -37,43 +37,45 @@
                             alt="BioCLIP 2 architecture and embedding visualization" loading="lazy">
                     </div>
                     <div class="paper-content">
-                        <span class="paper-venue neurips">NeurIPS 2025</span>
+                        <div class="paper-content-wrapper">
+                            <span class="paper-venue neurips">NeurIPS 2025</span>
 
-                        <h2 class="paper-title">BioCLIP 2: Emergent Properties from Scaling Hierarchical Contrastive
-                            Learning</h2>
+                            <h2 class="paper-title">BioCLIP 2: Emergent Properties from Scaling Hierarchical Contrastive
+                                Learning</h2>
 
-                        <div class="paper-scrollable">
-                            <p class="paper-authors">
-                                Jianyang Gu, Samuel Stevens, Elizabeth G Campolongo, Matthew J Thompson, Net Zhang,
-                                Jiaman Wu, Andrei Kopanev, Zheda Mai, Alexander E. White, James Balhoff, Wasila Dahdul,
-                                Daniel Rubenstein, Hilmar Lapp, Tanya Berger-Wolf, Wei-Lun Chao, Yu Su
-                            </p>
-                            <p class="paper-abstract">
-                                Foundation models trained at scale exhibit remarkable emergent behaviors, learning new
-                                capabilities beyond their initial training objectives. We find such emergent behaviors
-                                in biological vision models via large-scale contrastive vision-language training. To
-                                achieve this, we first curate TreeOfLife-200M, comprising 214 million images of living
-                                organisms, the largest and most diverse biological organism image dataset to date. We
-                                then train BioCLIP 2 on TreeOfLife-200M to distinguish different species. Despite the
-                                narrow training objective, BioCLIP 2 yields extraordinary accuracy when applied to
-                                various biological visual tasks such as habitat classification and trait prediction. We
-                                identify emergent properties in the learned embedding space of BioCLIP 2. At the
-                                inter-species level, the embedding distribution of different species aligns closely with
-                                functional and ecological meanings (e.g., beak sizes and habitats). At the intra-species
-                                level, instead of being diminished, the intra-species variations (e.g., life stages and
-                                sexes) are preserved and better separated in subspaces orthogonal to inter-species
-                                distinctions. We provide formal proof and analyses to explain why hierarchical
-                                supervision and contrastive objectives encourage these emergent properties. Crucially,
-                                our results reveal that these properties become increasingly significant with
-                                larger-scale training data, leading to a biologically meaningful embedding space.
-                            </p>
-                        </div>
+                            <div class="paper-scrollable">
+                                <p class="paper-authors">
+                                    Jianyang Gu, Samuel Stevens, Elizabeth G Campolongo, Matthew J Thompson, Net Zhang,
+                                    Jiaman Wu, Andrei Kopanev, Zheda Mai, Alexander E. White, James Balhoff, Wasila Dahdul,
+                                    Daniel Rubenstein, Hilmar Lapp, Tanya Berger-Wolf, Wei-Lun Chao, Yu Su
+                                </p>
+                                <p class="paper-abstract">
+                                    Foundation models trained at scale exhibit remarkable emergent behaviors, learning new
+                                    capabilities beyond their initial training objectives. We find such emergent behaviors
+                                    in biological vision models via large-scale contrastive vision-language training. To
+                                    achieve this, we first curate TreeOfLife-200M, comprising 214 million images of living
+                                    organisms, the largest and most diverse biological organism image dataset to date. We
+                                    then train BioCLIP 2 on TreeOfLife-200M to distinguish different species. Despite the
+                                    narrow training objective, BioCLIP 2 yields extraordinary accuracy when applied to
+                                    various biological visual tasks such as habitat classification and trait prediction. We
+                                    identify emergent properties in the learned embedding space of BioCLIP 2. At the
+                                    inter-species level, the embedding distribution of different species aligns closely with
+                                    functional and ecological meanings (e.g., beak sizes and habitats). At the intra-species
+                                    level, instead of being diminished, the intra-species variations (e.g., life stages and
+                                    sexes) are preserved and better separated in subspaces orthogonal to inter-species
+                                    distinctions. We provide formal proof and analyses to explain why hierarchical
+                                    supervision and contrastive objectives encourage these emergent properties. Crucially,
+                                    our results reveal that these properties become increasingly significant with
+                                    larger-scale training data, leading to a biologically meaningful embedding space.
+                                </p>
+                            </div>
 
-                        <div class="paper-links">
-                            <a href="https://doi.org/10.48550/arXiv.2505.23883" class="paper-link paper-link-doc"
-                                target="_blank" rel="noopener">Paper</a>
-                            <a href="https://imageomics.github.io/bioclip-2/" class="paper-link paper-link-site"
-                                target="_blank" rel="noopener">Project Site</a>
+                            <div class="paper-links">
+                                <a href="https://doi.org/10.48550/arXiv.2505.23883" class="paper-link paper-link-doc"
+                                    target="_blank" rel="noopener">Paper</a>
+                                <a href="https://imageomics.github.io/bioclip-2/" class="paper-link paper-link-site"
+                                    target="_blank" rel="noopener">Project Site</a>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -85,43 +87,45 @@
                             loading="lazy">
                     </div>
                     <div class="paper-content">
-                        <span class="paper-venue iclr">ICLR 2026</span>
+                        <div class="paper-content-wrapper">
+                            <span class="paper-venue iclr">ICLR 2026</span>
 
-                        <h2 class="paper-title">
-                            BioCAP: Exploiting Synthetic Captions Beyond Labels in Biological Foundation Models
-                        </h2>
+                            <h2 class="paper-title">
+                                BioCAP: Exploiting Synthetic Captions Beyond Labels in Biological Foundation Models
+                            </h2>
 
-                        <div class="paper-scrollable">
-                            <p class="paper-authors">
-                                Ziheng Zhang, Xinyue Ma, Arpita Chowdhury, Elizabeth G. Campolongo, Matthew J. Thompson,
-                                Net Zhang, Samuel Stevens, Hilmar Lapp, Tanya Berger-Wolf, Yu Su, Wei-Lun Chao, Jianyang
-                                Gu
-                            </p>
-                            <p class="paper-abstract">
-                                This work investigates descriptive captions as an additional source of supervision for
-                                biological multimodal foundation models. Images and captions can be viewed as
-                                complementary samples from the latent morphospace of a species, each capturing certain
-                                biological traits. Incorporating captions during training encourages alignment with this
-                                shared latent structure, emphasizing potentially diagnostic characters while suppressing
-                                spurious correlations. The main challenge, however, lies in obtaining faithful,
-                                instance-specific captions at scale. This requirement has limited the utilization of
-                                natural language supervision in organismal biology compared with many other scientific
-                                domains. We complement this gap by generating synthetic captions with multimodal large
-                                language models (MLLMs), guided by Wikipedia-derived visual information and
-                                taxon-tailored format examples. These domain-specific contexts help reduce hallucination
-                                and yield accurate, instance-based descriptive captions. Using these captions, we train
-                                BioCAP (i.e., BioCLIP with Captions), a biological foundation model that captures rich
-                                semantics and achieves strong performance in species classification and text-image
-                                retrieval. These results demonstrate the value of descriptive captions beyond labels in
-                                bridging biological images with multimodal foundation models.
-                            </p>
-                        </div>
+                            <div class="paper-scrollable">
+                                <p class="paper-authors">
+                                    Ziheng Zhang, Xinyue Ma, Arpita Chowdhury, Elizabeth G. Campolongo, Matthew J. Thompson,
+                                    Net Zhang, Samuel Stevens, Hilmar Lapp, Tanya Berger-Wolf, Yu Su, Wei-Lun Chao, Jianyang
+                                    Gu
+                                </p>
+                                <p class="paper-abstract">
+                                    This work investigates descriptive captions as an additional source of supervision for
+                                    biological multimodal foundation models. Images and captions can be viewed as
+                                    complementary samples from the latent morphospace of a species, each capturing certain
+                                    biological traits. Incorporating captions during training encourages alignment with this
+                                    shared latent structure, emphasizing potentially diagnostic characters while suppressing
+                                    spurious correlations. The main challenge, however, lies in obtaining faithful,
+                                    instance-specific captions at scale. This requirement has limited the utilization of
+                                    natural language supervision in organismal biology compared with many other scientific
+                                    domains. We complement this gap by generating synthetic captions with multimodal large
+                                    language models (MLLMs), guided by Wikipedia-derived visual information and
+                                    taxon-tailored format examples. These domain-specific contexts help reduce hallucination
+                                    and yield accurate, instance-based descriptive captions. Using these captions, we train
+                                    BioCAP (i.e., BioCLIP with Captions), a biological foundation model that captures rich
+                                    semantics and achieves strong performance in species classification and text-image
+                                    retrieval. These results demonstrate the value of descriptive captions beyond labels in
+                                    bridging biological images with multimodal foundation models.
+                                </p>
+                            </div>
 
-                        <div class="paper-links">
-                            <a href="https://arxiv.org/abs/2510.20095" class="paper-link paper-link-doc"
-                                target="_blank" rel="noopener">Paper</a>
-                            <a href="https://imageomics.github.io/biocap/" class="paper-link paper-link-site"
-                                target="_blank" rel="noopener">Project Site</a>
+                            <div class="paper-links">
+                                <a href="https://arxiv.org/abs/2510.20095" class="paper-link paper-link-doc"
+                                    target="_blank" rel="noopener">Paper</a>
+                                <a href="https://imageomics.github.io/biocap/" class="paper-link paper-link-site"
+                                    target="_blank" rel="noopener">Project Site</a>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -132,41 +136,43 @@
                         <img src="../images/bioclip-hook.svg" alt="BioCLIP model architecture" loading="lazy">
                     </div>
                     <div class="paper-content">
-                        <span class="paper-venue cvpr">CVPR 2024</span>
-                        <h2 class="paper-title">BioCLIP: A Vision Foundation Model for the Tree of Life</h2>
+                        <div class="paper-content-wrapper">
+                            <span class="paper-venue cvpr">CVPR 2024</span>
+                            <h2 class="paper-title">BioCLIP: A Vision Foundation Model for the Tree of Life</h2>
 
-                        <div class="paper-scrollable">
-                            <p class="paper-authors">
-                                Samuel Stevens, Jiaman Wu, Matthew J Thompson, Elizabeth G Campolongo, Chan Hee Song,
-                                David Edward Carlyn, Li Dong, Wasila M Dahdul, Charles Stewart, Tanya Berger-Wolf,
-                                Wei-Lun Chao, Yu Su
-                            </p>
-                            <p class="paper-abstract">
-                                Images of the natural world collected by a variety of cameras from drones to individual
-                                phones are increasingly abundant sources of biological information. There is an
-                                explosion of computational methods and tools particularly computer vision for extracting
-                                biologically relevant information from images for science and conservation. Yet most of
-                                these are bespoke approaches designed for a specific task and are not easily adaptable
-                                or extendable to new questions contexts and datasets. A vision model for general
-                                organismal biology questions on images is of timely need. To approach this we curate and
-                                release TreeOfLife-10M the largest and most diverse ML-ready dataset of biology images.
-                                We then develop BioCLIP a foundation model for the tree of life leveraging the unique
-                                properties of biology captured by TreeOfLife-10M namely the abundance and variety of
-                                images of plants animals and fungi together with the availability of rich structured
-                                biological knowledge. We rigorously benchmark our approach on diverse fine-grained
-                                biology classification tasks and find that BioCLIP consistently and substantially
-                                outperforms existing baselines (by 17% to 20% absolute). Intrinsic evaluation reveals
-                                that BioCLIP has learned a hierarchical representation conforming to the tree of life
-                                shedding light on its strong generalizability. All data code and models will be publicly
-                                released upon acceptance.
-                            </p>
-                        </div>
+                            <div class="paper-scrollable">
+                                <p class="paper-authors">
+                                    Samuel Stevens, Jiaman Wu, Matthew J Thompson, Elizabeth G Campolongo, Chan Hee Song,
+                                    David Edward Carlyn, Li Dong, Wasila M Dahdul, Charles Stewart, Tanya Berger-Wolf,
+                                    Wei-Lun Chao, Yu Su
+                                </p>
+                                <p class="paper-abstract">
+                                    Images of the natural world collected by a variety of cameras from drones to individual
+                                    phones are increasingly abundant sources of biological information. There is an
+                                    explosion of computational methods and tools particularly computer vision for extracting
+                                    biologically relevant information from images for science and conservation. Yet most of
+                                    these are bespoke approaches designed for a specific task and are not easily adaptable
+                                    or extendable to new questions contexts and datasets. A vision model for general
+                                    organismal biology questions on images is of timely need. To approach this we curate and
+                                    release TreeOfLife-10M the largest and most diverse ML-ready dataset of biology images.
+                                    We then develop BioCLIP a foundation model for the tree of life leveraging the unique
+                                    properties of biology captured by TreeOfLife-10M namely the abundance and variety of
+                                    images of plants animals and fungi together with the availability of rich structured
+                                    biological knowledge. We rigorously benchmark our approach on diverse fine-grained
+                                    biology classification tasks and find that BioCLIP consistently and substantially
+                                    outperforms existing baselines (by 17% to 20% absolute). Intrinsic evaluation reveals
+                                    that BioCLIP has learned a hierarchical representation conforming to the tree of life
+                                    shedding light on its strong generalizability. All data code and models will be publicly
+                                    released upon acceptance.
+                                </p>
+                            </div>
 
-                        <div class="paper-links">
-                            <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Stevens_BioCLIP_A_Vision_Foundation_Model_for_the_Tree_of_Life_CVPR_2024_paper.html"
-                                class="paper-link paper-link-doc" target="_blank" rel="noopener">Paper</a>
-                            <a href="https://imageomics.github.io/bioclip/" class="paper-link paper-link-site"
-                                target="_blank" rel="noopener">Project Site</a>
+                            <div class="paper-links">
+                                <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Stevens_BioCLIP_A_Vision_Foundation_Model_for_the_Tree_of_Life_CVPR_2024_paper.html"
+                                    class="paper-link paper-link-doc" target="_blank" rel="noopener">Paper</a>
+                                <a href="https://imageomics.github.io/bioclip/" class="paper-link paper-link-site"
+                                    target="_blank" rel="noopener">Project Site</a>
+                            </div>
                         </div>
                     </div>
                 </article>

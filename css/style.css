@@ -479,14 +479,18 @@ footer {
 
 .paper-content {
     padding: var(--spacing-md);
-    flex-grow: 1;
+}
+
+.paper-content-wrapper {
     display: flex;
     flex-direction: column;
+    height: 380px;
 }
 
 /* Scrollable section for authors + abstract */
 .paper-scrollable {
-    max-height: 200px;
+    flex: 1;
+    min-height: 0;
     overflow-y: auto;
     margin-bottom: var(--spacing-md);
     padding-right: 8px;
