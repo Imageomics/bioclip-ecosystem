@@ -84,6 +84,17 @@ TODO: Add BioCLIP associated software:
                     <p>
                         Source-specific tools for processing data (images) downloaded using distributed downloader. The post-download processing (e.g., exact duplicate filtering and extracting FathomNet detections) is packaged and uses MPI. All other image content-based tools used in creating the TreeOfLife-200M dataset are included as scripted pipelines listed below.
                     </p>
+                    <p>
+                        Key Features:
+                        <ul class="feature-list">
+                            <li><b>Packaged tools for processing</b> GBIF, EOL, FathomNet, and LILA BC data downloaded through distributed-downloader.</li>
+                            <li><b>Human-face identification</b> pipeline for image filtering.</li>
+                            <li><b>Museum specimen image filtering</b> pipeline: remove non-specimen images (e.g., maps, folders, text documents).</li>
+                            <li><b>Citizen science image filtering</b> pipeline: remove near duplicate images in single observations.</li>
+                            <li><b>Camera trap image filtering</b> pipeline: remove images with no focal species.</li>
+                            <li><b>PDQ hash-based image deduplication</b> pipeline: remove duplicate images not identified through traditional hashes.</li>
+                        </ul>
+                    </p>
                     <a href="https://github.com/Imageomics/TreeOfLife-toolbox" class="btn btn-primary">View on GitHub</a>
                 </div>
                 <div class="component-image img-treeoflife-toolbox">
