@@ -34,6 +34,7 @@
         // Define navigation items with their path relative to ROOT
         const navItems = [
             { id: '#nav-models', relPath: 'pages/models.html', fileName: 'models.html' },
+            { id: '#nav-papers', relPath: 'pages/papers.html', fileName: 'papers.html' },
             { id: '#nav-data', relPath: 'pages/data.html', fileName: 'data.html' },
             { id: '#nav-software', relPath: 'pages/software.html', fileName: 'software.html' },
             { id: '#nav-demos', relPath: 'pages/demos.html', fileName: 'demos.html' }
