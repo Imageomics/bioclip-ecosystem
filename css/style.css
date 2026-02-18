@@ -34,8 +34,7 @@ a:hover {
    2. LAYOUT UTILITIES
    ========================================= */
 .container {
-    width: 90%;
-    max-width: var(--container-width);
+    max-width: 85%;
     margin: 0 auto;
 }
 
