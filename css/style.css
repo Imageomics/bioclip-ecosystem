@@ -267,6 +267,35 @@ a:hover {
     margin-bottom: var(--spacing-lg);
 }
 
+/* Forces an even 3-col → 2-col → 1-col layout for 6-card grids */
+.decision-guide--grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.decision-guide--grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 900px) {
+    .decision-guide--grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .decision-guide--grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .decision-guide--grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .decision-guide--grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
 .guide-card {
     background: var(--color-bg-card);
     padding: var(--spacing-md);
