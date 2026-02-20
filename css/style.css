@@ -141,6 +141,85 @@ a:hover {
     justify-content: center;
 }
 
+/* =========================================
+   4b. HERO VIDEO SHOWCASE
+   ========================================= */
+.hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    text-align: left;
+}
+
+.home-hero.hero-description {
+    margin: 0 0 var(--spacing-md);
+}
+
+.hero-text h1 {
+    font-size: 2.4rem;
+}
+
+.hero-text .hero-actions {
+    justify-content: flex-start;
+}
+
+.hero-visual {
+    position: relative;
+}
+
+/* Gradient border wrapper — mirrors the h1 gradient */
+.hero-video-wrap {
+    position: relative;
+    padding: 2px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    box-shadow:
+        0 8px 32px rgba(0, 151, 178, 0.18),
+        0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+/* Soft ambient glow sitting behind the frame */
+.hero-video-wrap::before {
+    content: '';
+    position: absolute;
+    inset: -20px;
+    border-radius: 20px;
+    background:
+        radial-gradient(ellipse at 35% 40%, rgba(0, 151, 178, 0.13) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 75%, rgba(155, 203, 94, 0.10) 0%, transparent 55%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.hero-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Transparent overlay intercepts hover so browsers never show media controls */
+.hero-video-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 2px; /* sits inside the 2px gradient border */
+    border-radius: 10px;
+    z-index: 1;
+}
+
+/* Suppress browser-injected media overlays (belt-and-suspenders) */
+.hero-video::-webkit-media-controls { display: none !important; }
+.hero-video::-webkit-media-controls-enclosure { display: none !important; }
+.hero-video::-webkit-media-controls-panel { display: none !important; }
+
+/* Respect prefers-reduced-motion: pause the video on its first frame */
+@media (prefers-reduced-motion: reduce) {
+    .hero-video-wrap {
+        animation: none;
+    }
+}
+
 /* Buttons */
 .btn {
     display: inline-block;
@@ -692,6 +771,20 @@ p {
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2.5rem;
+    }
+
+    .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2.5rem;
+    }
+
+    .hero-text .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        padding: 0;
     }
 
     .component-row,

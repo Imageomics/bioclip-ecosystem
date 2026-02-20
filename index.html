@@ -15,14 +15,46 @@
 
     <section class="hero">
         <div class="container">
-            <h1>Vision Foundation Models<br>for the Tree of Life</h1>
-            <p>
-                Bridging computer vision and biology. BioCLIP models learn hierarchical representations 
-                of the natural world, enabling advanced species classification, trait prediction, and more.
-            </p>
-            <div class="hero-actions">
-                <a href="#guide" class="btn btn-primary">Choose Your Tool</a>
-                <a href="https://huggingface.co/collections/imageomics/bioclip" target="_blank" class="btn btn-outline">Explore Collection</a>
+            <div class="hero-inner">
+                <!-- Left: Text content -->
+                <div class="hero-text">
+                    <h1>Vision Foundation Models<br>for the Tree of Life</h1>
+                    <p class="home-hero hero-description">
+                        Bridging computer vision and biology. BioCLIP models learn hierarchical representations
+                        of the natural world, enabling advanced species classification, trait prediction, and more.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#guide" class="btn btn-primary">Choose Your Tool</a>
+                        <a href="https://huggingface.co/collections/imageomics/bioclip" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Explore Collection</a>
+                    </div>
+                </div>
+
+                <!-- Right: Video -->
+                <div class="hero-visual">
+                    <div class="hero-video-wrap">
+                        <video class="hero-video" 
+                            autoplay muted loop playsinline disablepictureinpicture 
+                            src="images/classifying-taxa.mp4"
+                            controlsList="nodownload nofullscreen noremoteplayback" x-webkit-airplay="deny" 
+                            aria-label="Looped animation showing images of organisms being classified across taxonomic ranks, marker starts at Life and moves down a pyramid from kingdom to species, the label is displayed at each level with sample images from that taxa">
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Pause hero video for users who prefer reduced motion -->
+                <script>
+                    (function () {
+                        const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+                        const video = document.querySelector('.hero-video');
+                        function apply(e) {
+                            if (!video) return;
+                            if (e.matches) { video.pause(); }
+                            else { video.play(); }
+                        }
+                        apply(mq);
+                        mq.addEventListener('change', apply);
+                    })();
+                </script>
             </div>
         </div>
     </section>
