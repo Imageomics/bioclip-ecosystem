@@ -40,6 +40,21 @@
                         </video>
                     </div>
                 </div>
+
+                <!-- Pause hero video for users who prefer reduced motion -->
+                <script>
+                    (function () {
+                        const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+                        const video = document.querySelector('.hero-video');
+                        function apply(e) {
+                            if (!video) return;
+                            if (e.matches) { video.pause(); }
+                            else { video.play(); }
+                        }
+                        apply(mq);
+                        mq.addEventListener('change', apply);
+                    })();
+                </script>
             </div>
         </div>
     </section>

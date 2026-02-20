@@ -213,6 +213,13 @@ a:hover {
 .hero-video::-webkit-media-controls-enclosure { display: none !important; }
 .hero-video::-webkit-media-controls-panel { display: none !important; }
 
+/* Respect prefers-reduced-motion: pause the video on its first frame */
+@media (prefers-reduced-motion: reduce) {
+    .hero-video-wrap {
+        animation: none;
+    }
+}
+
 /* Buttons */
 .btn {
     display: inline-block;
