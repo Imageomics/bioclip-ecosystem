@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioCLIP Ecosystem | Foundation Models for the Tree of Life</title>
+    <meta name="description" content="Central hub for the BioCLIP project. Find the right biological vision model for your research.">
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="https://github.com/Imageomics/Imageomics-guide/raw/3478acc0068a87a5604069d04a29bdb0795c2045/docs/logos/Imageomics_logo_butterfly.png">
+    <script src="https://unpkg.com/lucide@0.563.0"></script>
+    <script src="js/load-components.js" defer></script>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-inner">
+                <!-- Left: Text content -->
+                <div class="hero-text">
+                    <h1>Vision Foundation Models<br>for the Tree of Life</h1>
+                    <p class="home-hero hero-description">
+                        Bridging computer vision and biology. BioCLIP models learn hierarchical representations
+                        of the natural world, enabling advanced species classification, trait prediction, and more.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#guide" class="btn btn-primary">Choose Your Tool</a>
+                        <a href="https://huggingface.co/collections/imageomics/bioclip" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Explore Collection</a>
+                    </div>
+                </div>
+
+                <!-- Right: Video -->
+                <div class="hero-visual">
+                    <div class="hero-video-wrap">
+                        <video class="hero-video"
+                            autoplay muted loop playsinline disablepictureinpicture
+                            src="images/classifying-taxa.mp4"
+                            controlsList="nodownload nofullscreen noremoteplayback" x-webkit-airplay="deny"
+                            aria-label="Looped animation showing images of organisms being classified across taxonomic ranks, marker starts at Life and moves down a pyramid from kingdom to species, the label is displayed at each level with sample images from that taxa">
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Pause hero video for users who prefer reduced motion -->
+                <script>
+                    (function () {
+                        const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+                        const video = document.querySelector('.hero-video');
+                        function apply(e) {
+                            if (!video) return;
+                            if (e.matches) { video.pause(); }
+                            else { video.play(); }
+                        }
+                        apply(mq);
+                        mq.addEventListener('change', apply);
+                    })();
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <section id="guide" class="section">
+        <div class="container">
+            <h2 class="section-title">Which BioCLIP component do you need?</h2>
+
+            <div class="decision-guide decision-guide--grid-3">
+                <div class="guide-card">
+                    <span class="guide-icon"><i data-lucide="brain"></i></span>
+                    <h3 class="guide-title">Models</h3>
+                    <p class="guide-desc">Choose the right BioCLIP model from the latest BioCLIP 2 (ViT-L/14) to BioCAP and the original BioCLIP (ViT-B/16).</p>
+                    <a href="pages/models.html" class="guide-link">Go to Models &rarr;</a>
+                </div>
+
+                <div class="guide-card">
+                    <span class="guide-icon"><i data-lucide="database"></i></span>
+                    <h3 class="guide-title">Training Data</h3>
+                    <p class="guide-desc">Explore TreeOfLife datasets for training biological vision models, from 10M to 214M images across hundreds of thousands of taxa.</p>
+                    <a href="pages/data.html#datasets" class="guide-link">Go to Training Data &rarr;</a>
+                </div>
+
+                <div class="guide-card">
+                    <span class="guide-icon"><i data-lucide="bar-chart-2"></i></span>
+                    <h3 class="guide-title">Benchmarks</h3>
+                    <p class="guide-desc">Evaluate your model on biologically relevant benchmarks, including Rare Species and IDLE-OO Camera Traps.</p>
+                    <a href="pages/data.html#benchmarks" class="guide-link">Go to Benchmarks &rarr;</a>
+                </div>
+
+                <div class="guide-card">
+                    <span class="guide-icon"><i data-lucide="terminal"></i></span>
+                    <h3 class="guide-title">Software</h3>
+                    <p class="guide-desc">Use pybioclip, TreeOfLife-toolbox, TaxonoPy, and other tools for data processing or to integrate BioCLIP into your Python code or computational pipeline.</p>
+                    <a href="pages/software.html" class="guide-link">Go to Software &rarr;</a>
+                </div>
+
+                <div class="guide-card">
+                    <span class="guide-icon"><i data-lucide="monitor"></i></span>
+                    <h3 class="guide-title">Demos</h3>
+                    <p class="guide-desc">Try interactive demos for zero-shot classification and open-ended species identification without writing any code.</p>
+                    <a href="pages/demos.html" class="guide-link">Go to Demos &rarr;</a>
+                </div>
+
+                <div class="guide-card">
+                    <span class="guide-icon"><i data-lucide="file-text"></i></span>
+                    <h3 class="guide-title">Papers</h3>
+                    <p class="guide-desc">Read the research papers behind BioCLIP, BioCLIP 2, BioCAP, and the TreeOfLife datasets.</p>
+                    <a href="pages/papers.html" class="guide-link">Go to Papers &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

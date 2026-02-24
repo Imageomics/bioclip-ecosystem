@@ -1,0 +1,40 @@
+/* =========================================
+   DESIGN TOKENS & VARIABLES
+   ========================================= */
+/*
+ * Imageomics Official Color Palette
+ * Imageomics Green: #92991c
+ * Imageomics Blue: #5d8095
+ * Dark Teal: #0097b2
+ * Light Green: #9bcb5e
+*/
+:root {
+    /* Color Palette - Imageomics Theme */
+    --color-primary: #0097b2;       /* Dark Teal for primary actions */
+    --color-primary-dark: #006c7e;  /* Darker teal for hover states */
+    --color-secondary: #92991c;     /* Imageomics Green for secondary accents */
+    --color-accent: #9bcb5e;        /* Light Green for highlights */
+
+    /* Neutrals */
+    --color-bg-body: #f8fafc;       /* Light gray background */
+    --color-bg-card: #ffffff;       /* White for cards */
+    --color-text-main: #1e293b;     /* Dark slate for main text */
+    --color-text-muted: #5d8095;    /* Imageomics Blue for subtext */
+    --color-border: #e2e8f0;        /* Light border color */
+
+    /* Spacing & Sizing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --border-radius: 8px;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+
+    /* Typography */
+    --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --font-mono: 'Consolas', 'Monaco', monospace;
+}

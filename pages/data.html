@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioCLIP Ecosystem | Foundation Models for the Tree of Life</title>
+    <meta name="description" content="Central hub for the BioCLIP project. Find the right biological vision model for your research.">
+    
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="https://github.com/Imageomics/Imageomics-guide/raw/3478acc0068a87a5604069d04a29bdb0795c2045/docs/logos/Imageomics_logo_butterfly.png">
+    <script src="../js/load-components.js" defer></script>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Tree of Life Datasets</h1>
+            <p>
+                Bridging computer vision and biology, TreeOfLife datasets provide a rich resource for training and evaluating models, based in biological knowledge.
+            </p>
+            <div class="hero-actions">
+                <a href="#guide" class="btn btn-primary">Choose Your Dataset</a>
+                <a href="https://huggingface.co/collections/imageomics/bioclip" target="_blank" class="btn btn-outline">Explore Collection</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="guide" class="section">
+        <div class="container">
+            <h2 class="section-title">Which TreeOfLife Dataset do you need?</h2>
+            
+            <div class="decision-guide decision-guide--grid-3">
+                <div class="guide-card">
+                    <span class="guide-icon">🚀</span> <!--🗄️-->
+                    <h3 class="guide-title">Largest Available</h3>
+                    <p class="guide-desc">I need the largest available TreeOfLife dataset with images paired to their taxonomic labels.</p>
+                    <a href="#treeoflife-200m" class="guide-link">Go to TreeOfLife-200M &rarr;</a>
+                </div>
+
+                <div class="guide-card">
+                    <span class="guide-icon">📸</span>
+                    <h3 class="guide-title">Camera Trap Benchmark</h3>
+                    <p class="guide-desc">I want to evaluate my model's performance on the IDLE-OO Camera Trap Benchmark presented in the 2025 NeurIPS paper.</p>
+                    <a href="#camera-trap" class="guide-link">Go to IDLE-OO Camera Trap Benchmark &rarr;</a>
+                </div>
+
+                <div class="guide-card">
+                    <span class="guide-icon">📃</span>
+                    <h3 class="guide-title">Image Captions</h3>
+                    <p class="guide-desc">I want to train a model with morphological image captions for each image.</p>
+                    <a href="#treeoflife-10m-captions" class="guide-link">Go to TreeOfLife-10M Captions &rarr;</a>
+                </div>
+
+                <div class="guide-card">
+                    <span class="guide-icon">📜</span>
+                    <h3 class="guide-title">Original</h3>
+                    <p class="guide-desc">I need the original TreeOfLife-10M dataset described in the 2024 CVPR paper.</p>
+                    <a href="#treeoflife-10m" class="guide-link">Go to TreeOfLife-10M &rarr;</a>
+                </div>
+
+                <div class="guide-card">
+                    <span class="guide-icon">📈</span>
+                    <h3 class="guide-title">Rare Species Benchmark</h3>
+                    <p class="guide-desc">I want to evaluate my model's performance on the Rare Species Benchmark presented in the 2024 CVPR paper.</p>
+                    <a href="#rare-species" class="guide-link">Go to Rare Species Benchmark&rarr;</a>
+                </div>
+
+                <div class="guide-card">
+                    <span class="guide-icon">💾</span>
+                    <h3 class="guide-title">All Data</h3>
+                    <p class="guide-desc">I want to explore or download datasets or benchmarks used to train and evaluate the BioCLIP models.</p>
+                    <a href="#collection" class="guide-link">Go to HF Collection &rarr;</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="datasets" class="section">
+        <div class="container">
+            <h2 class="section-title">TreeOfLife Datasets</h2>
+            <p class="section-desc">
+                The TreeOfLife datasets are curated collections of images representing a wide range of biological taxa, paired with their corresponding taxonomic labels. These datasets are designed to facilitate the training and evaluation of vision-based knowledge-guided biological foundation models.
+            </p>
+        </div>
+
+        <section id="treeoflife-200m" class="section">
+            <div class="container">
+                <div class="component-row">
+                    <div class="component-text">
+                        <span class="tag new">Latest Release</span>
+                        <h2>TreeOfLife-200M</h2>
+                        <p>
+                            With nearly <strong>214-million images</strong> representing more than <strong>950-thousand taxa</strong> across the tree of life, TreeOfLife-200M is the largest and most diverse public ML-ready dataset for computer vision models in biology at release.
+                            This dataset combines images and metadata from four core biodiversity data providers: Global Biodiversity Information Facility (GBIF), Encyclopedia of Life (EOL), BIOSCAN-5M, and FathomNet to more than double the number of unique taxa covered by TreeOfLife-10M, adding 50 million more images than BioTrove (and nearly triple the unique taxa).
+                        </p>
+                        <p>
+                            TreeOfLife-200M also increases image context diversity with museum specimen, camera trap, and citizen science images well-represented. Our rigorous curation process ensures each image has the most specific taxonomic label possible and that the overall dataset provides a well-rounded foundation for training <a href="https://huggingface.co/imageomics/bioclip-2" target="_blank">BioCLIP 2</a> and future biology foundation models.
+                        </p>
+                        <ul class="feature-list">
+                            <li><strong>Image Count:</strong> 213.9 million images</li>
+                            <li><strong>Unique Taxa:</strong> 952,257 unique 7-rank taxa strings</li>
+                            <li><strong>Image Types:</strong> Museum specimen, camera traps, citizen science, drawings (not labeled)</li>
+                            <li><strong>Sources:</strong> Global Biodiversity Information Facility (GBIF), Encyclopedia of Life (EOL), BIOSCAN-5M, FathomNet</li>
+                            <li><strong>Best for:</strong> Large foundation model training.</li>
+                        </ul>
+                        <a href="https://imageomics.github.io/bioclip-2/" class="btn btn-primary">Visit BioCLIP 2 Site</a>
+                        <a href="https://huggingface.co/datasets/imageomics/TreeOfLife-200M" class="btn btn-outline ml-2">Dataset Card</a>
+                    </div>
+                    <!-- TODO: Update image -->
+                    <div class="component-image img-bioclip2">
+                        <img src="../images/bioclip2-ogimage.png" alt="BioCLIP 2 model visualization showing the model architecture, a clustered embedding plot with organism thumbnails, showing the separation by age and sex orthogonal to the species axis" loading="lazy" style="max-width:100%;height:auto;display:block;object-fit:contain;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="treeoflife-10m-captions" class="section bg-light">
+            <div class="container">
+                <div class="component-row">
+                    <div class="component-text">
+                        <span class="tag tool">Captioned Dataset</span>
+                        <h2>TreeOfLife-10M Captions</h2>
+                        <p>
+                            A dataset of 10 million generated captions, Wikipedia-derived descriptions and format examples for the TreeOfLife-10M. These captions were generated using InternVL3-38B based on biological contexts that help the model generate more accurate captions. It was used to train BioCAP, a CLIP-based model.
+
+                            This dataset is designed to enhance the training of vision models by providing rich, contextual information about each image included in the original TreeOfLife-10M dataset.
+                        </p>
+                        <p>
+                            <ul class="feature-list">
+                                <li><b>10 Million Captions:</b> A diverse set of captions generated for a wide range of biological images.</li>
+                                <li><b>Contextual Information:</b> Captions provide rich context to enhance model understanding.</li>
+                                <li><b>Training Resource:</b> Specifically designed to improve training for vision models like BioCAP.</li>
+                            </ul>
+                        </p>
+                        <a href="https://imageomics.github.io/biocap/" class="btn btn-primary">Visit BioCAP Site</a>
+                        <a href="https://huggingface.co/datasets/imageomics/TreeOfLife-10M-Captions" class="btn btn-outline ml-2">Dataset Card</a>
+                    </div>
+                    <!-- TODO: Update image -->
+                    <div class="component-image img-pybioclip">
+                        TreeOfLife-10M Captions
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="treeoflife-10m" class="section">
+            <div class="container">
+                <div class="component-row">
+                    <div class="component-text">
+                        <span class="tag">Original Dataset</span>
+                        <h2>TreeOfLife-10M (Original)</h2>
+                        <p>
+                            The original TreeOfLife dataset presented in "BioCLIP: A Vision Foundation Model for the Tree of Life". 
+                            With over <strong>10-million images</strong> covering <strong>454-thousand taxa</strong> in the tree of life, TreeOfLife-10M was the largest-to-date ML-ready dataset of images of biological organisms paired with their associated taxonomic labels. 
+
+                        </p>
+                        <p>
+                            It expanded on the foundation established by existing high-quality datasets, such as iNat21 and BIOSCAN-1M, by further incorporating newly curated images from the Encyclopedia of Life (eol.org), which supplies most of TreeOfLife-10M’s data diversity. 
+                            Every image in TreeOfLife-10M is labeled to the most specific taxonomic level possible, as well as higher taxonomic ranks in the tree of life. TreeOfLife-10M was generated for the purpose of training BioCLIP and future biology foundation models.
+                        </p>
+                        <ul class="feature-list">
+                            <li><strong>Image Count:</strong> 10,065,576 images</li>
+                            <li><strong>Unique Taxa:</strong> 454,103 unique 7-rank taxa strings</li>
+                            <li><strong>Text Types:</strong> Common names (black-billed magpie), scientific names (<i>Pica hudsonia</i>), and taxonomic names (<i>Animalia Chordata Aves Passeriformes Corvidae Pica hudsonia</i>)</li>
+                            <li><strong>Image Types (not labeled):</strong> Museum specimen, citizen science, drawings</li>
+                            <li><strong>Sources:</strong> EOL, BIOSCAN-1M, iNat21</li>
+                            <li><strong>Best for:</strong> Smaller foundation model or distilled model training.</li>
+                        </ul>
+                        <a href="https://imageomics.github.io/bioclip/" class="btn btn-primary">Visit BioCLIP Site</a>
+                        <a href="https://huggingface.co/datasets/imageomics/TreeOfLife-10M" class="btn btn-outline ml-2">Dataset Card</a>
+                    </div>
+                    <!-- TODO: Update image, maybe the tree from the dataset card? -->
+                    <div class="component-image img-bioclip">
+                        <img src="../images/bioclip-hook.svg" alt="BioCLIP model visualization showing the model architecture" loading="lazy" style="max-width:100%;height:auto;display:block;object-fit:contain;">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section id="benchmarks" class="section">
+        <div class="container">
+            <h2 class="section-title">TreeOfLife Benchmark Datasets</h2>
+            <p class="section-desc">
+                The TreeOfLife benchmark datasets are curated collections of images representing a wide range of biological taxa, paired with their corresponding taxonomic labels. These benchmarks are designed to provide biologically and ecologically relevant evaluation tasks.
+            </p>
+        </div>
+
+        <section id="camera-trap" class="section">
+            <div class="container">
+                <div class="component-row">
+                    <div class="component-text">
+                        <span class="tag">Camera Trap Benchmark</span>
+                <h2>IDLE-OO Camera Traps</h2>
+                <p>
+                    IDLE-OO Camera Traps is a 5-dataset benchmark of camera trap images from the Labeled Information Library of Alexandria: Biology and Conservation (LILA BC) with a total of 2,586 images for species classification. 
+                    Each of the 5 benchmarks is balanced to have the same number of images for each species within it (between 310 and 1120 images), representing between 16 and 39 species.
+                </p>
+                <ul class="feature-list">
+                    <li><strong>Image Count:</strong> 2,586 images</li>
+                    <li><strong>Unique Species:</strong> 96 species across 5 datasets</li>
+                    <li><strong>Image Types:</strong> Camera trap images</li>
+                    <li><strong>Sources:</strong> LILA BC: Desert Lion Conservation Camera Traps, ENA24-detection, Island Conservation Camera Traps, Ohio Small Animals, Orinoquia Camera Traps</li>
+                    <li><strong>Best for:</strong> Evaluating model performance on real-world camera trap data.</li>
+                </ul>
+                <a href="https://imageomics.github.io/bioclip-2/" class="btn btn-primary">Visit BioCLIP 2 Site</a>
+                <a href="https://huggingface.co/datasets/imageomics/IDLE-OO-Camera-Traps" class="btn btn-outline ml-2">Dataset Card</a>
+                </div>
+                    <!-- TODO: Update image -->
+                    <div class="component-image img-bioclip2">
+                        <img src="../images/bioclip2-ogimage.png" alt="BioCLIP 2 model visualization showing the model architecture, a clustered embedding plot with organism thumbnails, showing the separation by age and sex orthogonal to the species axis" loading="lazy" style="max-width:100%;height:auto;display:block;object-fit:contain;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="rare-species" class="section">
+            <div class="container">
+                <div class="component-row">
+                    <div class="component-text">
+                        <span class="tag">Rare Species Benchmark</span>
+                <h2>Rare Species Benchmark</h2>
+                <p>
+                    The Rare Species Benchmark was generated alongside TreeOfLife-10M as a benchmark for BioCLIP; data (images and text) were pulled from Encyclopedia of Life (EOL) to generate a dataset consisting of rare species for zero-shot-classification and more refined image classification tasks. 
+                    Here, we use "rare species" to mean species listed on The International Union for Conservation of Nature (IUCN) Red List as Near Threatened, Vulnerable, Endangered, Critically Endangered, and Extinct in the Wild.
+                </p>
+                <ul class="feature-list">
+                    <li><strong>Image Count:</strong> 11,983 images</li>
+                    <li><strong>Unique Species:</strong> 400 species</li>
+                    <li><strong>Sources:</strong> Encyclopedia of Life (EOL) and International Union for Conservation of Nature (IUCN) Red List</li>
+                    <li><strong>Best for:</strong> Zero-shot classification</li>
+                </ul>
+                <a href="https://imageomics.github.io/bioclip/" class="btn btn-primary">Visit BioCLIP Site</a>
+                <a href="https://huggingface.co/datasets/imageomics/rare-species" class="btn btn-outline ml-2">Dataset Card</a>
+                </div>
+                    <!-- TODO: Update image, maybe the tree from the dataset card? -->
+                    <div class="component-image img-bioclip">
+                        <img src="../images/bioclip-hook.svg" alt="BioCLIP model visualization showing the model architecture" loading="lazy" style="max-width:100%;height:auto;display:block;object-fit:contain;">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section id="collection" class="section bg-light">
+        <div class="container">
+            <div class="component-row">
+                <div class="component-text">
+                    <span class="tag tool">Repository</span>
+                    <h2>Hugging Face Collection</h2>
+                    <p>
+                        The central warehouse for all BioCLIP assets. This collection aggregates all versions of the models, the training datasets, benchmarks, and interactive demos.
+                    </p>
+                    <p>
+                        Use this if you need direct access to the TreeOfLife datasets or evaluation benchmarks.
+                    </p>
+                    <ul class="feature-list">
+                        <li><strong>Datasets:</strong> TreeOfLife-200M, TreeOfLife-10M, TreeOfLife-10M Captions.</li>
+                        <li><strong>Benchmarks:</strong> Rare Species, IDLE-OO Camera Traps.</li>
+                    </ul>
+                    <a href="https://huggingface.co/collections/imageomics/bioclip" class="btn btn-primary">Browse Collection</a>
+                </div>
+                <div class="component-image img-hf">
+                    🤗 Hugging Face Collection
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
