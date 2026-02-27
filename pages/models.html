@@ -35,8 +35,14 @@
             <div class="decision-guide decision-guide--grid-2">
                 <div class="guide-card">
                     <span class="guide-icon">🚀</span>
-                    <h3 class="guide-title">State-of-the-Art</h3>
-                    <p class="guide-desc">I need the latest model with the highest accuracy (ViT-L) and emergent biological capabilities.</p>
+                    <h3 class="guide-title">State-of-the-Art (Huge)</h3>
+                    <p class="guide-desc">I need the latest model with the highest accuracy (ViT-H) and emergent biological capabilities. Speed and size are not an issue.</p>
+                    <a href="#bioclip-2.5-huge" class="guide-link">Go to BioCLIP 2.5 Huge &rarr;</a>
+                </div>
+                <div class="guide-card">
+                    <span class="guide-icon">🚀</span>
+                    <h3 class="guide-title">State-of-the-Art (Large)</h3>
+                    <p class="guide-desc">I have inference speed or size constraints, but need the latest model with the highest accuracy (ViT-L) and emergent biological capabilities.</p>
                     <a href="#bioclip-2" class="guide-link">Go to BioCLIP 2 &rarr;</a>
                 </div>
                 <div class="guide-card">
@@ -62,6 +68,37 @@
         </div>
     </section>
 
+    <section id="bioclip-2.5-huge" class="section">
+        <div class="container">
+            <div class="component-row">
+                <div class="component-text">
+                    <span class="tag new">State-of-the-Art</span>
+                    <h2>BioCLIP 2.5 Huge</h2>
+                    <p>
+                        The largest model in the BioCLIP collection, BioCLIP 2.5 Huge was trained on <strong>233-million images</strong> across more than <strong>950-thousand taxa</strong>.
+                        Training was accelerated through an updated version of the BioCLIP 2 repository (<a href="https://github.com/Imageomics/bioclip-2/tree/v2.0.0" target="_blank">v2.0.0</a>).
+                        BioCLIP 2.5 exhibits emergent properties, extending beyond simple classification, to distinguish between life stages, sexes, and align embeddings with ecological traits like beak size.
+                    </p>
+                    <p>
+                        The model achieves new state-of-the-art performance on both species classification and broader biological visual tasks, surpassing BioCLIP 2 by 5.7% and 3.5%, respectively. 
+                        Especially in FishNet, which requires the model to distinguish different habitats, BioCLIP 2.5 Huge demonstrates a 8.7% performance improvement over BioCLIP 2.
+                    </p>
+                    <ul class="feature-list">
+                        <li><strong>Architecture:</strong> ViT-H/14 (Huge)</li>
+                        <li><strong>Training Data:</strong> 233 Million images (TreeOfLife-200M)</li>
+                        <li><strong>Best for:</strong> High-accuracy tasks, fine-grained trait analysis, zero-shot learning, no inference speed or memory constraints.</li>
+                    </ul>
+                    <a href="https://imageomics.github.io/bioclip-2/" class="btn btn-primary">Visit BioCLIP 2 Site</a>
+                    <a href="https://huggingface.co/imageomics/bioclip-2.5-vith14" class="btn btn-outline ml-2">Model Card</a>
+                    <a href="https://doi.org/10.48550/arXiv.2505.23883" class="btn btn-outline ml-2">Read Paper</a>
+                </div>
+                <div class="component-image img-bioclip2">
+                    <img src="../images/bioclip2-ogimage.png" alt="BioCLIP 2 model visualization showing the model architecture, a clustered embedding plot with organism thumbnails, showing the separation by age and sex orthogonal to the species axis" loading="lazy" style="max-width:100%;max-height:100%;display:block;object-fit:contain;">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="bioclip-2" class="section">
         <div class="container">
             <div class="component-row">
@@ -77,8 +114,8 @@
                     </p>
                     <ul class="feature-list">
                         <li><strong>Architecture:</strong> ViT-L/14 (Large)</li>
-                        <li><strong>Training Data:</strong> 214 Million images (TreeOfLife-200M)</li>
-                        <li><strong>Best for:</strong> High-accuracy tasks, fine-grained trait analysis, zero-shot learning.</li>
+                        <li><strong>Training Data:</strong> 214 Million images (TreeOfLife-200M, Revision <a href="https://huggingface.co/datasets/imageomics/TreeOfLife-200M/tree/a8f38b4388579862c56ae57d6f094c2ac0e92e12" target="_blank">a8f38b4</a>)</li>
+                        <li><strong>Best for:</strong> High-accuracy tasks, fine-grained trait analysis, zero-shot learning when size or inference speed are constrained.</li>
                     </ul>
                     <a href="https://imageomics.github.io/bioclip-2/" class="btn btn-primary">Visit BioCLIP 2 Site</a>
                     <a href="https://huggingface.co/imageomics/bioclip-2" class="btn btn-outline ml-2">Model Card</a>
