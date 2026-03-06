@@ -925,7 +925,8 @@ p {
     }
 
     .site-header.nav-open .mobile-nav {
-        max-height: 360px;
+        max-height: 80vh;
+        overflow-y: auto;
     }
 
     .papers-grid {
