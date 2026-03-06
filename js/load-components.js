@@ -75,6 +75,7 @@
         toggle.addEventListener('click', () => {
             const isOpen = headerEl.classList.toggle('nav-open');
             toggle.setAttribute('aria-expanded', String(isOpen));
+            toggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
             mobileNav.setAttribute('aria-hidden', String(!isOpen));
         });
 
