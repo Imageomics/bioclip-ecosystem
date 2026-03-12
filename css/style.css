@@ -468,13 +468,63 @@ a:hover {
 }
 
 .demo-screenshot img {
-    max-width: 700px;
-    width: auto;
+    max-width: 100%;
+    width: 100%;
     height: auto;
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     border: 1px solid #cbd5e1;
     object-fit: contain;
+}
+
+/* =========================================
+   5b. DEMO GALLERY WIDGET
+   ========================================= */
+.demo-gallery {
+    position: relative;
+    width: 100%;
+}
+
+.demo-gallery-img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border: 1px solid #cbd5e1;
+    object-fit: contain;
+    display: none;
+}
+
+.demo-gallery-img.active {
+    display: block;
+}
+
+.demo-gallery-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.demo-gallery-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--color-primary);
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: background-color 0.2s ease;
+}
+
+.demo-gallery-dot.active {
+    background-color: var(--color-primary);
+}
+
+.demo-gallery-dot:hover {
+    background-color: var(--color-primary);
+    opacity: 0.7;
 }
 
 /* Placeholder gradients */
@@ -571,6 +621,11 @@ a:hover {
 .tag.tool {
     background-color: #fef3c7;
     color: #b45309;
+}
+
+.tag.search {
+    background-color: #f3e8ff;
+    color: #7c3aed;
 }
 
 .component-text p {
@@ -910,6 +965,11 @@ p {
         max-width: 100%;
         width: 100%;
         height: auto;
+    }
+
+    .demo-gallery-img {
+        max-width: 100%;
+        width: 100%;
     }
 
     .nav-links {

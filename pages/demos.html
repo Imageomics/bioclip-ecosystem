@@ -17,17 +17,33 @@
         <div class="container">
             <h1>Interactive Demos</h1>
             <p>
-                Try BioCLIP models directly in your browser. Upload images to classify species using zero-shot or open-ended methods.
+                Try BioCLIP models directly in your browser. Upload images to classify species using zero-shot or open-ended methods, search for visually similar organisms, and explore the TreeOfLife Data.
             </p>
+            <div class="hero-actions">
+                <a href="#guide" class="btn btn-primary">Choose Your Demo</a>
+                <a href="#howtos" class="btn btn-outline">Demo How-tos</a>
+            </div>
         </div>
     </section>
 
-    <section id="demos" class="section">
+    <section id="guide" class="section">
         <div class="container">
-            <div class="decision-guide">
+            <h2 class="section-title">Which demo do you need?</h2>
+
+            <div class="decision-guide decision-guide--grid-3">
+                <div class="guide-card">
+                    <span class="guide-icon"><i data-lucide="binoculars"></i></span>
+                    <span class="tag search">Image Search</span>
+                    <h3 class="guide-title">BioCLIP Image Search Lite</h3>
+                    <p class="guide-desc">
+                        Upload a photo of any organism and find visually similar images from TreeOfLife-200M using BioCLIP 2 embeddings.
+                    </p>
+                    <a href="https://huggingface.co/spaces/imageomics/bioclip-image-search-lite" target="_blank" class="btn btn-primary">Launch Demo &rarr;</a>
+                </div>
+
                 <div class="guide-card">
                     <span class="guide-icon"><i data-lucide="sparkles"></i></span>
-                    <span class="tag new">Latest</span>
+                    <span class="tag new">Classification</span>
                     <h3 class="guide-title">BioCLIP 2 Demo</h3>
                     <p class="guide-desc">
                         Identify species and classify images using open-ended or zero-shot methods with the latest BioCLIP 2 model trained on 214 million images.
@@ -37,7 +53,7 @@
 
                 <div class="guide-card">
                     <span class="guide-icon"><i data-lucide="scan-search"></i></span>
-                    <span class="tag">Original</span>
+                    <span class="tag new">Classification</span>
                     <h3 class="guide-title">BioCLIP Demo</h3>
                     <p class="guide-desc">
                         Classify images of organisms across plant, animal, and fungal species using the original BioCLIP model with taxonomic predictions.
@@ -48,31 +64,84 @@
         </div>
     </section>
 
-    <section class="section bg-light">
+    <section id="howtos" class="section">
         <div class="container">
-            <h2 class="section-title">How to Use the Demos</h2>
-            <div class="component-row">
-                <div class="component-text">
-                    <h3>Getting Started</h3>
-                    <p>
-                        Our demos are hosted on Hugging Face Spaces and powered by Gradio, making them easy to use directly in your browser without any installation.
-                    </p>
-                    <ul class="feature-list">
-                        <li><strong>Upload an image</strong> – Drag and drop or click to upload any image of an organism.</li>
-                        <li><strong>Choose classification mode</strong> – Select zero-shot (with custom labels) or open-ended (taxonomic hierarchy) classification.</li>
-                        <li><strong>View predictions</strong> – See the model's predictions with confidence scores across taxonomic ranks.</li>
-                        <li><strong>Compare to predicted taxon</strong> - In open-ended classification, compare your image to a random sample image of the predicted taxon from the training data. Follow the provided source link to learn more about it.</li>
-                    </ul>
-                    <p>
-                        For programmatic access or batch processing, check out <a href="./software.html#pybioclip">pybioclip</a>.
-                    </p>
-                </div>
-                <div class="component-image demo-screenshot">
-                    <img src="../images/demo-example.png" alt="BioCLIP Demo Interface">
+            <h2 class="section-title">Demo How-tos</h2>
+        </div>
+
+        <section class="section bg-light">
+            <div class="container">
+                <div class="component-row">
+                    <div class="component-text">
+                        <h3>Classification Demos</h3>
+                        <p>
+                            Our classification demos are hosted on Hugging Face Spaces and powered by Gradio, making them easy to use directly in your browser without any installation.
+                        </p>
+                        <ul class="feature-list">
+                            <li><strong>Upload an image</strong> – Drag and drop or click to upload any image of an organism.</li>
+                            <li><strong>Choose classification mode</strong> – Select zero-shot (with custom labels) or open-ended (taxonomic hierarchy) classification.</li>
+                            <li><strong>View predictions</strong> – See the model's predictions with confidence scores across taxonomic ranks.</li>
+                            <li><strong>Compare to predicted taxon</strong> - In open-ended classification, compare your image to a random sample image of the predicted taxon from the training data. Follow the provided source link to learn more about it.</li>
+                        </ul>
+                        <p>
+                            For programmatic access or batch processing, check out <a href="./software.html#pybioclip">pybioclip</a>.
+                        </p>
+                    </div>
+                    <div class="component-image demo-screenshot">
+                        <img src="../images/demo-example.png" alt="BioCLIP Demo Interface showing zero-shot classification results">
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="component-row">
+                    <div class="component-text">
+                        <h3>Image Search Lite</h3>
+                        <p>
+                            BioCLIP Image Search Lite uses BioCLIP 2 embeddings to find visually similar images from <a href="./data.html#treeoflife-200m">TreeOfLife-200M</a>. Images are fetched on-demand from their original source URLs (<a href="https://github.com/inaturalist/inaturalist-open-data" target="_blank">iNaturalist</a>, <a href="https://eol.org/" target="_blank">EOL</a>, <a href="https://biodiversitygenomics.net/projects/5m-insects/" target="_blank">BIOSCAN-5M</a>, <a href="https://www.fathomnet.org/" target="_blank">FathomNet</a>, etc.).
+                        </p>
+                        <ul class="feature-list">
+                            <li><strong>Upload an image</strong> – Drag and drop or click to upload any image of an organism.</li>
+                            <li><strong>Choose image source scope</strong> – Filter results by availability: All Sources, URL-Available Only, or iNaturalist Only.</li>
+                            <li><strong>Adjust search parameters</strong> – Tune Search Depth (nprobe) for accuracy and Top N Results for how many matches to return.</li>
+                            <li><strong>Browse search results</strong> – View a grid of visually similar images ranked by BioCLIP 2 embedding distance. Click any result to see its full-resolution image, taxonomy, and source information.</li>
+                            <li><strong>View predictions</strong> – Switch to the Prediction tab to see BioCLIP 2's species-level predictions with confidence bars at different taxonomic ranks.</li>
+                            <li><strong>Explore the taxonomy tree</strong> – Switch to the Summary tab to view a taxonomy tree summarizing the taxonomic distribution of your search results.</li>
+                        </ul>
+                        <a href="https://huggingface.co/spaces/imageomics/bioclip-image-search-lite" target="_blank" class="btn btn-primary">Launch Image Search Lite &rarr;</a>
+                        <a href="https://github.com/Imageomics/bioclip-image-search-lite" target="_blank" class="btn btn-outline ml-2">View on GitHub</a>
+                    </div>
+                    <div class="component-image demo-screenshot">
+                        <div class="demo-gallery">
+                            <img src="../images/BioCLIP_image_search_lite_demo_2.png" alt="BioCLIP Image Search Lite – search results grid with selected image details" class="demo-gallery-img active">
+                            <img src="../images/BioCLIP_image_search_lite_demo_1.png" alt="BioCLIP Image Search Lite – prediction results and taxonomy tree" class="demo-gallery-img">
+                            <div class="demo-gallery-dots">
+                                <button class="demo-gallery-dot active" aria-label="Show search results screenshot"></button>
+                                <button class="demo-gallery-dot" aria-label="Show prediction and taxonomy screenshot"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </section>
+
+    <script>
+        document.querySelectorAll('.demo-gallery').forEach(function(gallery) {
+            var imgs = gallery.querySelectorAll('.demo-gallery-img');
+            var dots = gallery.querySelectorAll('.demo-gallery-dot');
+            dots.forEach(function(dot, i) {
+                dot.addEventListener('click', function() {
+                    imgs.forEach(function(img) { img.classList.remove('active'); });
+                    dots.forEach(function(d) { d.classList.remove('active'); });
+                    imgs[i].classList.add('active');
+                    dots[i].classList.add('active');
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
