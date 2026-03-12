@@ -100,13 +100,13 @@
                     <div class="component-text">
                         <h3>Image Search Lite</h3>
                         <p>
-                            BioCLIP Image Search Lite finds visually similar images from <a href="./data.html#treeoflife-200m">TreeOfLife-200M</a>. Images are fetched on-demand from their original source URLs (<a href="https://github.com/inaturalist/inaturalist-open-data" target="_blank">iNaturalist</a>, <a href="https://eol.org/" target="_blank">EOL</a>, <a href="https://biodiversitygenomics.net/projects/5m-insects/" target="_blank">BIOSCAN-5M</a>, <a href="https://www.fathomnet.org/" target="_blank">FathomNet</a>, etc.).
+                            BioCLIP Image Search Lite uses BioCLIP 2 embeddings to find visually similar images from <a href="./data.html#treeoflife-200m">TreeOfLife-200M</a>. Images are fetched on-demand from their original source URLs (<a href="https://github.com/inaturalist/inaturalist-open-data" target="_blank">iNaturalist</a>, <a href="https://eol.org/" target="_blank">EOL</a>, <a href="https://biodiversitygenomics.net/projects/5m-insects/" target="_blank">BIOSCAN-5M</a>, <a href="https://www.fathomnet.org/" target="_blank">FathomNet</a>, etc.).
                         </p>
                         <ul class="feature-list">
                             <li><strong>Upload an image</strong> – Drag and drop or click to upload any image of an organism.</li>
                             <li><strong>Choose image source scope</strong> – Filter results by availability: All Sources, URL-Available Only, or iNaturalist Only.</li>
                             <li><strong>Adjust search parameters</strong> – Tune Search Depth (nprobe) for accuracy and Top N Results for how many matches to return.</li>
-                            <li><strong>Browse search results</strong> – View a grid of visually similar images ranked by embedding distance. Click any result to see its full-resolution image, taxonomy, and source information.</li>
+                            <li><strong>Browse search results</strong> – View a grid of visually similar images ranked by BioCLIP 2 embedding distance. Click any result to see its full-resolution image, taxonomy, and source information.</li>
                             <li><strong>View predictions</strong> – Switch to the Prediction tab to see BioCLIP 2's species-level predictions with confidence bars at different taxonomic ranks.</li>
                             <li><strong>Explore the taxonomy tree</strong> – Switch to the Summary tab to view a taxonomy tree summarizing the taxonomic distribution of your search results.</li>
                         </ul>
