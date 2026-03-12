@@ -623,6 +623,11 @@ a:hover {
     color: #b45309;
 }
 
+.tag.search {
+    background-color: #f3e8ff;
+    color: #7c3aed;
+}
+
 .component-text p {
     color: var(--color-text-muted);
     margin-bottom: var(--spacing-sm);
