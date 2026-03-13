@@ -485,6 +485,10 @@ a:hover {
     width: 100%;
 }
 
+.demo-gallery-images {
+    position: relative;
+}
+
 .demo-gallery-img {
     max-width: 100%;
     width: 100%;
@@ -498,6 +502,46 @@ a:hover {
 
 .demo-gallery-img.active {
     display: block;
+}
+
+.demo-gallery-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.85);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--color-primary);
+    opacity: 0;
+    transition: opacity 0.2s ease, background-color 0.2s ease;
+    z-index: 10;
+    padding: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.demo-gallery-prev {
+    left: 0.5rem;
+}
+
+.demo-gallery-next {
+    right: 0.5rem;
+}
+
+.demo-gallery-images:hover .demo-gallery-arrow {
+    opacity: 1;
+}
+
+.demo-gallery-arrow:hover {
+    background: rgba(255, 255, 255, 1);
+    opacity: 1;
 }
 
 .demo-gallery-dots {

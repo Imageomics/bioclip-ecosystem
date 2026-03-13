@@ -115,8 +115,12 @@
                     </div>
                     <div class="component-image demo-screenshot">
                         <div class="demo-gallery">
-                            <img src="../images/BioCLIP_image_search_lite_demo_2.png" alt="BioCLIP Image Search Lite – search results grid with selected image details" class="demo-gallery-img active">
-                            <img src="../images/BioCLIP_image_search_lite_demo_1.png" alt="BioCLIP Image Search Lite – prediction results and taxonomy tree" class="demo-gallery-img">
+                            <div class="demo-gallery-images">
+                                <img src="../images/BioCLIP_image_search_lite_demo_2.png" alt="BioCLIP Image Search Lite – search results grid with selected image details" class="demo-gallery-img active">
+                                <img src="../images/BioCLIP_image_search_lite_demo_1.png" alt="BioCLIP Image Search Lite – prediction results and taxonomy tree" class="demo-gallery-img">
+                                <button class="demo-gallery-arrow demo-gallery-prev" aria-label="Previous image">&#8249;</button>
+                                <button class="demo-gallery-arrow demo-gallery-next" aria-label="Next image">&#8250;</button>
+                            </div>
                             <div class="demo-gallery-dots">
                                 <button class="demo-gallery-dot active" aria-label="Show search results screenshot"></button>
                                 <button class="demo-gallery-dot" aria-label="Show prediction and taxonomy screenshot"></button>
@@ -132,14 +136,40 @@
         document.querySelectorAll('.demo-gallery').forEach(function(gallery) {
             var imgs = gallery.querySelectorAll('.demo-gallery-img');
             var dots = gallery.querySelectorAll('.demo-gallery-dot');
+
+            function getCurrentIndex() {
+                return Array.from(imgs).findIndex(function(img) {
+                    return img.classList.contains('active');
+                });
+            }
+
+            function showImage(index) {
+                imgs.forEach(function(img) { img.classList.remove('active'); });
+                dots.forEach(function(d) { d.classList.remove('active'); });
+                imgs[index].classList.add('active');
+                dots[index].classList.add('active');
+            }
+
             dots.forEach(function(dot, i) {
                 dot.addEventListener('click', function() {
-                    imgs.forEach(function(img) { img.classList.remove('active'); });
-                    dots.forEach(function(d) { d.classList.remove('active'); });
-                    imgs[i].classList.add('active');
-                    dots[i].classList.add('active');
+                    showImage(i);
                 });
             });
+
+            var prevBtn = gallery.querySelector('.demo-gallery-prev');
+            var nextBtn = gallery.querySelector('.demo-gallery-next');
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', function() {
+                    showImage((getCurrentIndex() - 1 + imgs.length) % imgs.length);
+                });
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', function() {
+                    showImage((getCurrentIndex() + 1) % imgs.length);
+                });
+            }
         });
     </script>
 
