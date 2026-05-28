@@ -35,7 +35,7 @@
         { id: 'nav-software', relPath: 'pages/software.html', fileName: 'software.html', label: 'Software' },
         { id: 'nav-demos',    relPath: 'pages/demos.html',    fileName: 'demos.html',    label: 'Demos'    },
         { id: 'nav-papers',   relPath: 'pages/papers.html',   fileName: 'papers.html',   label: 'Papers'   },
-        { id: 'nav-roadmap',  relPath: 'pages/roadmap.html',  fileName: 'roadmap.html',  label: 'Roadmap'   }
+        { id: 'nav-roadmap',  relPath: 'pages/roadmap.html',  fileName: 'roadmap.html',  label: 'Roadmap'  }
     ];
 
     // Build and inject nav links into both desktop and mobile navs
