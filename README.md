@@ -16,6 +16,7 @@ The site runs based on the following files. All site images are called from the 
   * `models.html`: Describes and links to all BioCLIP models, e.g., BioCLIP 2.5 Huge and BioCAP.
   * `papers.html`: Includes abstracts and links to papers and project-specific sites for each BioCLIP publication.
   * `software.html`: Describes and links to all software used in creating the models and datasets, as well as those to explore and more easily utilize them (e.g., `TaxonoPy` and `pybioclip`).
+  * `roadmap.html`: Describes plans for future ecosystem projects and updates, including models, data, software products, and community initiatives.
 
 ## Local Testing
 
