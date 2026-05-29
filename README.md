@@ -4,9 +4,9 @@ Centralized resource to describe and link out to all components of the BioCLIP p
 
 ## Project Structure
 
-The site runs based on the following files.
+The site runs based on the following files. All site images are called from the `images/` directory.
 
-* `index.html`: The main HTML file that provides the structure of the webpage and links to pages based on resource type.
+* `index.html`: The landing page for the BioCLIP Ecosystem website; this page prominently features the BioCLIP classification gif, and includes a decision guide with cards for each of the pages to help visitors narrow their search. It also links out to the full BioCLIP model, data, and demo collection on Hugging Face.
 * `css/style.css`: Custom styling for the application, including color schemes, layout, and animations.
     * `css/variables.css`: Pre-defined variables (e.g., Imageomics colors) for use in the custom styling for the site.
 * `js/load-components.js`: JavaScript file to load header and footer from the `components/` directory. Web and mobile navigation are controlled through this file; all pages must be listed here.
