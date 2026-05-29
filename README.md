@@ -11,7 +11,7 @@ The site runs based on the following files. All site images are called from the 
     * `css/variables.css`: Pre-defined variables (e.g., Imageomics colors) for use in the custom styling for the site.
 * `js/load-components.js`: JavaScript file to load header and footer from the `components/` directory. Web and mobile navigation are controlled through this file; all pages must be listed here.
 * `pages/`: Folder containing the subpages of the site.
-  * `data.html`: Describes and links to all datasets and benchmarks used for training and evaulating the BioCLIP models, e.g., TreeOfLife-200M and Rare Species.
+  * `data.html`: Describes and links to all datasets and benchmarks used for training and evaluating the BioCLIP models, e.g., TreeOfLife-200M and Rare Species.
   * `demos.html`: Describes and links to BioCLIP ecosystem demos with use instructions.
   * `models.html`: Describes and links to all BioCLIP models, e.g., BioCLIP 2.5 Huge and BioCAP.
   * `papers.html`: Includes abstracts and links to papers and project-specific sites for each BioCLIP publication.
