@@ -40,20 +40,6 @@ TODO: Add content
 
             <div class="decision-guide decision-guide--grid-2">
                 <div class="guide-card">
-                    <span class="guide-icon"><i data-lucide="brain"></i></span>
-                    <h3 class="guide-title">Models</h3>
-                    <p class="guide-desc">Plans for future BioCLIP model development</p>
-                    <a href="#future-models" class="guide-link">Go to model development &rarr;</a>
-                </div>
-
-                <div class="guide-card">
-                    <span class="guide-icon"><i data-lucide="database"></i></span>
-                    <h3 class="guide-title">Data</h3>
-                    <p class="guide-desc">Plans for future TreeOfLife data development</p>
-                    <a href="#future-data" class="guide-link">Go to Data Development &rarr;</a>
-                </div>
-
-                <div class="guide-card">
                     <span class="guide-icon"><i data-lucide="terminal"></i></span>
                     <h3 class="guide-title">Software</h3>
                     <p class="guide-desc">Plans for new and improved BioCLIP and TreeOfLife software and tools</p>
@@ -66,71 +52,25 @@ TODO: Add content
                     <p class="guide-desc">Plans for future community building and engagement initiatives</p>
                     <a href="#future-community" class="guide-link">Go to Community Development &rarr;</a>
                 </div>
+                
+                <div class="guide-card">
+                    <span class="guide-icon"><i data-lucide="brain"></i></span>
+                    <h3 class="guide-title">Models</h3>
+                    <p class="guide-desc">Plans for future BioCLIP model development</p>
+                    <a href="#future-models" class="guide-link">Go to model development &rarr;</a>
+                </div>
+
+                <div class="guide-card">
+                    <span class="guide-icon"><i data-lucide="database"></i></span>
+                    <h3 class="guide-title">Data</h3>
+                    <p class="guide-desc">Plans for future TreeOfLife data development</p>
+                    <a href="#future-data" class="guide-link">Go to Data Development &rarr;</a>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="plans" class="section">
-
-    <section id="future-models" class="section">
-        <div class="container">
-            <div class="component-row">
-                <div class="component-text">
-                    <span class="tag models">Models</span>
-                    <h2>Models Development</h2>
-                    <p>
-                        We have demonstrated emergent properties through scaling up and enriched biological semantic understanding through synthesized captions.
-                        The next steps for BioCLIP model development include hierarchical consistency and accessibility improvements.
-                    </p>
-                    <p>
-                        <ul class="feature-list">
-                            <li><b>Hierarchical Consistency</b>: With previous models achieving accurate species classification under the guidance of taxonomic labels, we aim to further leverage
-                                this structure to improve hierarchical consistency.</li>
-                            <li><b>Accessibility Improvements</b>: BioCLIP models now produce accurate species recognition on GPU-accelerated hardware. We aim to improve the accessibility of our models
-                                for edge devices, such as camera traps and web applications.</li>
-                        </ul>
-                    </p>
-                    <a href="models.html" class="btn btn-primary">Existing Models</a>
-                </div>
-                <div class="component-image img-models">
-                    <div class="icon-display">
-                        <i data-lucide="brain" class="icon-large"></i>
-                        <span class="icon-label">Models in Development</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="future-data" class="section bg-light">
-        <div class="container">
-            <div class="component-row">
-                <div class="component-text">
-                    <span class="tag data">Data</span>
-                    <h2>Data Development</h2>
-                    <p>
-                        Starting from <a href="https://huggingface.co/datasets/imageomics/TreeOfLife-10M">TreeOfLife-10M</a>, we have explored scaling up in <a href="https://huggingface.co/datasets/imageomics/TreeOfLife-200M">TreeOfLife-200M</a> and enriching captions in <a href="https://huggingface.co/datasets/imageomics/TreeOfLife-10M-Captions">TreeOfLife-10M-Captions</a>.
-                        The next steps for data development include improving the quality of captions, balancing the data distribution, and resolving species common names more consistently.
-                    </p>
-                    <ul class="feature-list">
-                        <li><b>Caption Quality</b>: The synthesized descriptive captions, grounded by Wikipedia-derived contexts, have helped <a href="https://huggingface.co/imageomics/biocap">BioCAP</a> acquire better understanding of biological semantics.
-                            We aim to improve the captions through more comprehensive knowledge integration and further expand the captioning to larger scales.</li>
-                        <li><b>Data Distribution Balancing</b>: Biological visual datasets often exhibit long-tailed distributions, with a few common species dominating the data and many rare species underrepresented.
-                            We aim to explore methods for balancing the data distribution, such as data selection, and investigate the influence of data on model performance.</li>
-                        <li><b>Species Name Resolution</b>: <a href="https://github.com/Imageomics/TaxonoPy">TaxonoPy</a> provides a solid initial framework for resolving species names across different data sources.
-                            We aim to further study the optimal strategy of species name resolution and the impact of name ambiguity on model performance.</li>
-                    </ul>
-                    <a href="data.html" class="btn btn-primary-data">Existing Datasets and Benchmarks</a>
-                </div>
-                <div class="component-image img-data">
-                    <div class="icon-display">
-                        <i data-lucide="database" class="icon-large"></i>
-                        <span class="icon-label">Data in Development</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section id="future-software" class="section">
         <div class="container">
@@ -188,6 +128,66 @@ TODO: Add content
                     <div class="icon-display">
                         <i data-lucide="messages-square" class="icon-large"></i>
                         <span class="icon-label">Community Development</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section id="future-models" class="section">
+        <div class="container">
+            <div class="component-row">
+                <div class="component-text">
+                    <span class="tag models">Models</span>
+                    <h2>Models Development</h2>
+                    <p>
+                        We have demonstrated emergent properties through scaling up and enriched biological semantic understanding through synthesized captions.
+                        The next steps for BioCLIP model development include hierarchical consistency and accessibility improvements.
+                    </p>
+                    <p>
+                        <ul class="feature-list">
+                            <li><b>Hierarchical Consistency</b>: With previous models achieving accurate species classification under the guidance of taxonomic labels, we aim to further leverage
+                                this structure to improve hierarchical consistency.</li>
+                            <li><b>Accessibility Improvements</b>: BioCLIP models now produce accurate species recognition on GPU-accelerated hardware. We aim to improve the accessibility of our models
+                                for edge devices, such as camera traps and web applications.</li>
+                        </ul>
+                    </p>
+                    <a href="models.html" class="btn btn-primary">Existing Models</a>
+                </div>
+                <div class="component-image img-models">
+                    <div class="icon-display">
+                        <i data-lucide="brain" class="icon-large"></i>
+                        <span class="icon-label">Models in Development</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="future-data" class="section bg-light">
+        <div class="container">
+            <div class="component-row">
+                <div class="component-text">
+                    <span class="tag data">Data</span>
+                    <h2>Data Development</h2>
+                    <p>
+                        Starting from <a href="https://huggingface.co/datasets/imageomics/TreeOfLife-10M">TreeOfLife-10M</a>, we have explored scaling up in <a href="https://huggingface.co/datasets/imageomics/TreeOfLife-200M">TreeOfLife-200M</a> and enriching captions in <a href="https://huggingface.co/datasets/imageomics/TreeOfLife-10M-Captions">TreeOfLife-10M-Captions</a>.
+                        The next steps for data development include improving the quality of captions, balancing the data distribution, and resolving species common names more consistently.
+                    </p>
+                    <ul class="feature-list">
+                        <li><b>Caption Quality</b>: The synthesized descriptive captions, grounded by Wikipedia-derived contexts, have helped <a href="https://huggingface.co/imageomics/biocap">BioCAP</a> acquire better understanding of biological semantics.
+                            We aim to improve the captions through more comprehensive knowledge integration and further expand the captioning to larger scales.</li>
+                        <li><b>Data Distribution Balancing</b>: Biological visual datasets often exhibit long-tailed distributions, with a few common species dominating the data and many rare species underrepresented.
+                            We aim to explore methods for balancing the data distribution, such as data selection, and investigate the influence of data on model performance.</li>
+                        <li><b>Species Name Resolution</b>: <a href="https://github.com/Imageomics/TaxonoPy">TaxonoPy</a> provides a solid initial framework for resolving species names across different data sources.
+                            We aim to further study the optimal strategy of species name resolution and the impact of name ambiguity on model performance.</li>
+                    </ul>
+                    <a href="data.html" class="btn btn-primary-data">Existing Datasets and Benchmarks</a>
+                </div>
+                <div class="component-image img-data">
+                    <div class="icon-display">
+                        <i data-lucide="database" class="icon-large"></i>
+                        <span class="icon-label">Data in Development</span>
                     </div>
                 </div>
             </div>
