@@ -5,7 +5,7 @@ TODO: Add BioCLIP associated software:
 - ✓ TaxonoPy
 - ✓ Distributed Downloader
 - BioCLIP App
-- emb_explorer
+- ✓ emb_explorer
 - bioclip vector DB
 -->
 
@@ -72,6 +72,13 @@ TODO: Add BioCLIP associated software:
                     <h3 class="guide-title">Distributed Downloader</h3>
                     <p class="guide-desc">Download a large number of images responsibly and reproducibly.</p>
                     <a href="#distributed-downloader" class="guide-link">Go to Distributed Downloader &rarr;</a>
+                </div>
+
+                <div class="guide-card">
+                    <span class="guide-icon"><i data-lucide="telescope"></i></span>
+                    <h3 class="guide-title">Image Embedding Explorer</h3>
+                    <p class="guide-desc">Visually explore and cluster image embeddings. Embed your own images with different models or bring precalculated embeddings to navigate, filter, and inspect clusters.</p>
+                    <a href="#emb-explorer" class="guide-link">Go to Embedding Explorer &rarr;</a>
                 </div>
             </div>
         </div>
@@ -208,6 +215,39 @@ TODO: Add BioCLIP associated software:
                     <div class="icon-display">
                         <i data-lucide="cloud-download" class="icon-large"></i>
                         <span class="icon-label">MPI-based FAIR Downloader</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="emb-explorer" class="section">
+        <div class="container">
+            <div class="component-row">
+                <div class="component-text">
+                    <span class="tag tool">Visualization</span>
+                    <h2>Image Embedding Explorer</h2>
+                    <p>
+                        A Streamlit-based tool for visual exploration and clustering of image embeddings. Either embed
+                        your own images with pretrained models (CLIP, BioCLIP) or load precalculated embeddings to
+                        interactively project,cluster, visualize, and navigate them.
+                    </p>
+                    <p>
+                        Key Features:
+                        <ul class="feature-list">
+                            <li><b>Embed &amp; explore:</b> turn your images into embeddings with a pretrained vision model (such as CLIP or BioCLIP), project them onto an interactive 2D map with PCA, t-SNE, or UMAP, color data points by trying different K-Means clusterings, and inspect representative images within each cluster.</li>
+                            <li><b>Reproducible results:</b> configurable random seeds make projections and clusterings repeatable across runs.</li>
+                            <li><b>Precalculated embeddings:</b> load parquet files with precomputed embeddings and apply dynamic cascading filters.</li>
+                            <li><b>GPU acceleration (optional)</b> via cuML, with automatic CPU fallback and no configuration needed.</li>
+                            <li><b>Repartition images by cluster</b> for downstream dataset curation.</li>
+                        </ul>
+                    </p>
+                    <a href="https://github.com/Imageomics/emb-explorer" class="btn btn-primary">View on GitHub</a>
+                </div>
+                <div class="component-image img-emb-explorer">
+                    <div class="icon-display">
+                        <i data-lucide="telescope" class="icon-large"></i>
+                        <span class="icon-label">Embedding Exploration</span>
                     </div>
                 </div>
             </div>
