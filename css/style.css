@@ -316,6 +316,48 @@ a:hover {
     transform: translateY(-1px);
 }
 
+.btn-primary-data {
+    background-color: #9b68ca;
+    color: white;
+    border: 2px solid #9b68ca;
+}
+
+.btn-primary-data:hover {
+    background-color: #7c3aed;
+    border-color: #7c3aed;
+    text-decoration: none;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.btn-primary-software {
+    background-color: var(--color-accent);
+    color: white;
+    border: 2px solid var(--color-accent);
+}
+
+.btn-primary-software:hover {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    text-decoration: none;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.btn-primary-community {
+    background-color: #5d8095;
+    color: white;
+    border: 2px solid #5d8095;
+}
+
+.btn-primary-community:hover {
+    background-color: #5d7f95c3;
+    border-color: #5d7f95c3;
+    text-decoration: none;
+    color: white;
+    transform: translateY(-1px);
+}
+
 .btn-outline {
     background-color: transparent;
     color: var(--color-text-main);
@@ -590,6 +632,26 @@ a:hover {
     color: white;
 }
 
+.img-models {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #0097b250 100%);
+    color: white;
+}
+
+.img-data {
+    background: linear-gradient(135deg, #9b68ca 0%, #7c3aed 100%);
+    color: white;
+}
+
+.img-software {
+    background: linear-gradient(135deg, #16a34a 0%, var(--color-secondary) 100%);
+    color: white;
+}
+
+.img-community {
+    background: linear-gradient(135deg, #5d8095 0%, rgba(55, 111, 145, 0.467) 100%); /* Imageomics Blue gradient */
+    color: white;
+}
+
 /* Software page component backgrounds */
 .img-treeoflife-toolbox {
     background: linear-gradient(135deg, #16a34a 0%, #22c55e 50%, #4ade80 100%);
@@ -670,6 +732,26 @@ a:hover {
 .tag.search {
     background-color: #f3e8ff;
     color: #7c3aed;
+}
+
+.tag.community {
+    background-color: #dbeafe;
+    color: #5d8095; /* Imageomics Blue with reduced opacity */
+}
+
+.tag.data {
+    background-color: #9b68ca4e;
+    color: #7c3aed;
+}
+
+.tag.models {
+    background-color: #0097b234;
+    color: var(--color-primary-dark);
+}
+
+.tag.software {
+    background-color: #9ccb5e58;
+    color: var(--color-secondary);
 }
 
 .component-text p {
