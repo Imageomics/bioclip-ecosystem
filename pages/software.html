@@ -229,13 +229,12 @@ TODO: Add BioCLIP associated software:
                     <h2>Image Embedding Explorer</h2>
                     <p>
                         A Streamlit-based tool for visual exploration and clustering of image embeddings. Either embed
-                        your own images with pretrained models (CLIP, BioCLIP) or load precalculated embeddings to
-                        interactively project, cluster, visualize, and navigate them.
+                        your own images with pretrained vision models (e.g., CLIP, BioCLIP) or load precalculated embeddings.
                     </p>
                     <p>
                         Key Features:
                         <ul class="feature-list">
-                            <li><b>Embed &amp; explore:</b> turn your images into embeddings with a pretrained vision model (such as CLIP or BioCLIP), project them onto an interactive 2D map with PCA, t-SNE, or UMAP, color data points by trying different K-Means clusterings, and inspect representative images within each cluster.</li>
+                            <li><b>Embed &amp; explore:</b> project image embeddings onto an <i>interactive</i> 2D map with PCA, t-SNE, or UMAP, color data points by different values, try various K-Means clusterings, and inspect representative images within each cluster.</li>
                             <li><b>Reproducible results:</b> configurable random seeds make projections and clusterings repeatable across runs.</li>
                             <li><b>Precalculated embeddings:</b> load parquet files with precomputed embeddings and apply dynamic cascading filters.</li>
                             <li><b>GPU acceleration (optional)</b> via cuML, with automatic CPU fallback and no configuration needed.</li>
