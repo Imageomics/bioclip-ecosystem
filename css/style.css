@@ -665,6 +665,10 @@ a:hover {
     background: linear-gradient(135deg, #4338ca 0%, #6366f1 50%, #818cf8 100%);
 }
 
+.img-emb-explorer {
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #d946ef 100%);
+}
+
 /* Icon display for component images */
 .icon-display {
     display: flex;
