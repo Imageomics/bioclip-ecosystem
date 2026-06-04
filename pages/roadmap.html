@@ -25,7 +25,7 @@ TODO: Add content
         <div class="container">
             <h1>Ecosystem Roadmap</h1>
             <p>
-                Learn about the future directions of the BioCLIP ecosystem, including plans for tools, models, data, and community building initiatives. This roadmap represents our vision for advancing biodiversity science through innovative machine learning applications and collaborative efforts.
+                Learn about the future directions of the BioCLIP ecosystem, including plans for models, data, tools, and community initiatives. This roadmap outlines our vision for advancing biodiversity science through innovative machine learning applications and collaborative efforts.
             </p>
             <div class="hero-actions">
                 <a href="#guide" class="btn btn-primary">Browse Areas of Focus</a>
@@ -84,7 +84,7 @@ TODO: Add content
                     <p>
                         <ul class="feature-list">
                             <li><b>Interpretability:</b> Incorporate inference interpretability methods, including <a href="https://github.com/Imageomics/Finer-CAM" target="_blank">Finer-CAM</a>, <a href="https://github.com/Imageomics/Prompt_CAM" target="_blank">Prompt_CAM</a>, and <a href="" target="_blank">SAEs</a>.</li>
-                            <li><b>Easy usage:</b> Mobile app, geo-fencing, interactive patch masking (multi-species), selectable taxonomy level.</li>
+                            <li><b>Easy usage:</b> Mobile app, geo-fencing, detection-classification pipeline (multi-species), interactive patch masking (multi-species), selectable taxonomy level.</li>
                             <li><b>TaxonoPy :</b> Improved coverage and handling of common names.</li>
                             <li><b>Improved Demos:</b> Hosted Image Embedding Explorer and BioCLIP Image Search, with images, not URLs. Added demos for self-hosted apps.</li>
                         </ul>
@@ -114,7 +114,7 @@ TODO: Add content
                     <p>
                         <ul>
                             <li><b>BioCLIP Helpdesk:</b> Centralized and community helpdesk following the open-source model of maintainer and community feedback and assistance.</li>
-                            <li><b>WildLabs Group:</b> Establish a group in the global [WildLabs community](https://wildlabs.net/en/groups) for collaboration and knowledge sharing.</li>
+                            <li><b>WildLabs Community:</b> Establish a WildLabs community for collaboration and knowledge sharing.</li>
                             <li><b>Community Forum:</b> Shared space for discussions and collaboration.</li>
                             <li><b>Community Highlights:</b> Showcase community achievements and contributions. Include a clear workflow for submitting projects to spotlight.</li>
                             <li><b>Community Contributions:</b> Centralized platform for community members to find issues and projects open to contribution.</li>
@@ -142,14 +142,16 @@ TODO: Add content
                     <h2>Models Development</h2>
                     <p>
                         We have demonstrated emergent properties through scaling up and enriched biological semantic understanding through synthesized captions.
-                        The next steps for BioCLIP model development include hierarchical consistency and accessibility improvements.
+                        The next steps for BioCLIP model development include hierarchical consistency, accessibility improvements, efficient adaptation, and applicability expansion.
                     </p>
                     <p>
                         <ul class="feature-list">
                             <li><b>Hierarchical Consistency</b>: With previous models achieving accurate species classification under the guidance of taxonomic labels, we aim to further leverage
                                 this structure to improve hierarchical consistency.</li>
-                            <li><b>Accessibility Improvements</b>: BioCLIP models now produce accurate species recognition on GPU-accelerated hardware. We want to improve the scalability and accessibility of our models
-                                for realtime and edge device applications, such as camera traps, mobile apps, and web applications.</li>
+                            <li><b>Accessibility Improvements</b>: BioCLIP models now produce accurate species recognition on GPU-accelerated hardware. We aim to improve the accessibility of our models
+                                for edge devices (such as camera traps) and web applications.</li>
+                            <li><b>Efficient Adaptation</b>: BioCLIP models were optimized for classification at the scale of the Tree of Life using TreeOfLife-200M. However, for downstream applications involving specific data domains or species coverage, model adaptation can further improve accuracy and efficiency. We aim to investigate best practices for adapting BioCLIP models across diverse application scenarios.</li>
+                            <li><b>Applicability Expansion</b>: BioCLIP models produce image-aligned taxonomic embeddings that enable applications beyond recognition, including fine-grained species generation (e.g., <a href="https://imageomics.github.io/TaxaAdapter/" target="_blank">TaxaAdapter</a>). We aim to explore novel applications of BioCLIP, inspired by the broad applicability of CLIP.</li>
                         </ul>
                     </p>
                     <a href="models.html" class="btn btn-primary">Existing Models</a>
