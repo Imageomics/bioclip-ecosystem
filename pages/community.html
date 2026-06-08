@@ -35,14 +35,93 @@ TODO: Add content as it's available:
                 Join and engage with the BioCLIP ecosystem community. Find ways to contribute, share your work, and connect with others interested in vision models for the Tree of Life.
             </p>
             <div class="hero-actions">
-                <a href="#guide" class="btn btn-primary">Get Involved (Coming soon!)</a>
-                <!--<a href="#browse" class="btn btn-outline">Browse Involvement Opportunities</a>-->
+                <a href="#guide" class="btn btn-primary">Get Involved</a>
+                <a href="#browse" class="btn btn-outline">Browse Involvement Opportunities</a>
             </div>
         </div>
     </section>
 
+    <section id="guide" class="section">
+        <div class="container">
+            <h2 class="section-title">How would you like to get involved?</h2>
 
+            <div class="decision-guide decision-guide--grid-2">
+                <div class="guide-card">
+                    <span class="guide-icon"><i data-lucide="list"></i></span>
+                    <h3 class="guide-title">Contribute</h3>
+                    <p class="guide-desc">Find projects looking for contributors.</p>
+                    <a href="#contribute" class="guide-link">Go to contribution opportunities &rarr;</a>
+                </div>
+
+                <div class="guide-card">
+                    <span class="guide-icon"><i data-lucide="chart-no-axes-combined"></i></span>
+                    <h3 class="guide-title">Leaderboard: Test Your Model</h3>
+                    <p class="guide-desc">See how different models perform against others in the BioCLIP ecosystem.</p>
+                    <a href="#leaderboard" class="guide-link">Go to Leaderboard &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="browse" class="section">
     
+    <!-- Contribute: open issues -->
+    <section id="contribute" class="section">
+        <div class="container">
+            <div class="component-row">
+                <div class="component-text">
+                    <span class="tag software">Contribute</span>
+                    <h2>Get Involved</h2>
+                    <p>
+                        Find projects looking for contributors, including open issues and feature requests across the BioCLIP ecosystem repositories.
+                        
+                    </p>
+                    <p>
+                        Search this centralized list of issues tagged with "good first issue", "help wanted", or "bug". Click on any issue to view details and find out how to contribute.
+                    </p>
+                    <a href="https://github.com/Imageomics/bioclip-ecosystem/issues" class="btn btn-primary-software">Submit a General Question to this repo</a>
+                </div>
+                <div class="issue-box-container">
+                    <div id="github-issues-list">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leaderboard -->
+    <section id="leaderboard" class="section bg-light">
+        <div class="container">
+            <div class="component-row">
+                <div class="component-text">
+                    <span class="tag model">Leaderboard</span>
+                    <h2>How does your model perform?</h2>
+                    <p>
+                        Method for submitting and evaluating models for inclusion on the leaderboard is pending. In the meantime, check out the BioBench leaderboard to see how current models perform across a variety of benchmarks.
+                    </p>
+                    <!--Submit a PR with your model results?-->
+                    <!--Biobench link? or should it be embeded?-->
+                    <a href="" class="btn btn-primary">Submit Results (Coming soon!)</a>
+                    <a href="https://imageomics.github.io/biobench/" class="btn btn-outline ml-2">BioBench Leaderboard</a>
+                </div>
+                <div class="component-image img-models">
+                    <div class="icon-display">
+                        <i data-lucide="chart-no-axes-combined" class="icon-large"></i>
+                        <span class="icon-label">Leaderboard with model names, links, and performance metrics pending</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+
+    <!---Issue box render -->
+    <script type="module">
+        import { loadGitHubIssues } from '../js/load-issues.js';
+        // Initialize the fetch and render process
+        loadGitHubIssues('github-issues-list');
+    </script>
+
 </body>
 
 </html>
