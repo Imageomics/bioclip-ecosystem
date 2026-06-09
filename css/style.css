@@ -317,14 +317,14 @@ a:hover {
 }
 
 .btn-primary-data {
-    background-color: #9b68ca;
+    background-color: var(--color-data-primary);
     color: white;
-    border: 2px solid #9b68ca;
+    border: 2px solid var(--color-data-primary);
 }
 
 .btn-primary-data:hover {
-    background-color: #7c3aed;
-    border-color: #7c3aed;
+    background-color: var(--color-data-secondary);
+    border-color: var(--color-data-secondary);
     text-decoration: none;
     color: white;
     transform: translateY(-1px);
@@ -345,14 +345,14 @@ a:hover {
 }
 
 .btn-primary-community {
-    background-color: #5d8095;
+    background-color: var(--color-community-primary);
     color: white;
-    border: 2px solid #5d8095;
+    border: 2px solid var(--color-community-primary);
 }
 
 .btn-primary-community:hover {
-    background-color: #5d7f95c3;
-    border-color: #5d7f95c3;
+    background-color: var(--color-community-secondary);
+    border-color: var(--color-community-secondary);
     text-decoration: none;
     color: white;
     transform: translateY(-1px);
@@ -620,7 +620,7 @@ a:hover {
     opacity: 0.7;
 }
 
-/* Placeholder gradients */
+/* Placeholder gradients based on color variables */
 .img-bioclip2 {
     background: #10b98143;
 }
@@ -629,8 +629,12 @@ a:hover {
     background: #0097b288;
 }
 
+.img-biocap {
+    background: #bb606b31;
+}
+
 .img-pybioclip {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    background: linear-gradient(135deg, #10b981 0%, var(--color-bioclip-2-text) 100%);
     color: white;
 }
 
@@ -645,17 +649,17 @@ a:hover {
 }
 
 .img-data {
-    background: linear-gradient(135deg, #9b68ca 0%, #7c3aed 100%);
+    background: linear-gradient(135deg, var(--color-data-primary) 0%, var(--color-data-secondary) 100%);
     color: white;
 }
 
 .img-software {
-    background: linear-gradient(135deg, #16a34a 0%, var(--color-secondary) 100%);
+    background: linear-gradient(135deg, var(--color-software-gradient) 0%, var(--color-secondary) 100%);
     color: white;
 }
 
 .img-community {
-    background: linear-gradient(135deg, #5d8095 0%, rgba(55, 111, 145, 0.467) 100%); /* Imageomics Blue gradient */
+    background: linear-gradient(135deg, var(--color-community-primary) 0%, rgba(55, 111, 145, 0.467) 100%); /* Imageomics Blue gradient */
     color: white;
 }
 
@@ -721,7 +725,7 @@ a:hover {
     display: inline-block;
     padding: 0.25rem 0.5rem;
     background-color: #0097b241;
-    color: #0369a1;
+    color: var(--color-bioclip);
     border-radius: 4px;
     font-size: 0.75rem;
     font-weight: 700;
@@ -732,7 +736,17 @@ a:hover {
 
 .tag.new {
     background-color: #10b98143;
-    color: #059669;
+    color: var(--color-bioclip-2);
+}
+
+.tag.bioclip2 {
+    background-color: var(--color-bioclip-2-bg);
+    color: var(--color-bioclip-2-text);
+}
+
+.tag.biocap{
+    background-color: var(--color-biocap-bg);
+    color: var(--color-biocap-text);
 }
 
 .tag.tool {
@@ -747,12 +761,12 @@ a:hover {
 
 .tag.community {
     background-color: #dbeafe;
-    color: #5d8095; /* Imageomics Blue with reduced opacity */
+    color: var(--color-community-primary); /* Imageomics Blue with reduced opacity */
 }
 
 .tag.data {
     background-color: #9b68ca4e;
-    color: #7c3aed;
+    color: var(--color-data-secondary);
 }
 
 .tag.models {
@@ -1015,18 +1029,18 @@ footer {
 }
 
 .paper-venue.cvpr {
-    background-color: #dbeafe;
-    color: #1d4ed8;
+    background-color: var(--color-bioclip-bg);
+    color: var(--color-bioclip-text);
 }
 
 .paper-venue.iclr {
-    background-color: #f3e8ff;
-    color: #7c3aed;
+    background-color: var(--color-biocap-bg);
+    color: var(--color-biocap-text);
 }
 
 .paper-venue.neurips {
-    background-color: #d1fae5;
-    color: #059669;
+    background-color: var(--color-bioclip-2-bg);
+    color: var(--color-bioclip-2-text);
 }
 
 .paper-title {
@@ -1074,12 +1088,12 @@ footer {
 }
 
 .paper-link-doc {
-    background-color: #92991c;
+    background-color: var(--color-secondary);
     color: white;
 }
 
 .paper-link-doc:hover {
-    background-color: #9bcb5e;
+    background-color: var(--color-accent);
     color: white;
     text-decoration: none;
 }

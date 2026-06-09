@@ -15,6 +15,23 @@
     --color-secondary: #92991c;     /* Imageomics Green for secondary accents */
     --color-accent: #9bcb5e;        /* Light Green for highlights */
 
+    /* Topic Colors */
+    --color-data-primary: #9b68ca;          /* Purple for data-related elements */
+    --color-data-secondary: #7c3aed;        /* Darker purple for emphasis, hover */
+    /* Software use accent and secondary colors */
+    --color-software-gradient: #16a34a;     /* Green used for software gradient backgrounds */
+    /* Models use primary and primary-dark colors */
+    --color-community-primary: #5d8095;     /* Imageomics Blue for community elements */
+    --color-community-secondary: #5d7f95c3; /* Semi-transparent Imageomics Blue for community element hover */
+
+    /* Model-paper specific colors */
+    --color-bioclip-bg: #dbeafe;         /* Light blue background for BioCLIP, associated data, paper tags */
+    --color-bioclip-text: #0369a1;       /* Blue for BioCLIP related tag text */
+    --color-bioclip-2-bg: #d1fae5;       /* Light green background for BioCLIP 2, associated data, paper tags */
+    --color-bioclip-2-text: #059669;     /* Green for BioCLIP 2 related tag text */
+    --color-biocap-bg: #f9dfe9;          /* Light pink (from figure) background for BioCAP, associated data, paper tags */
+    --color-biocap-text: #bb606b;        /* Dark pink (from figure) for BioCAP related tag text */
+
     /* Neutrals */
     --color-bg-body: #f8fafc;       /* Light gray background */
     --color-bg-card: #ffffff;       /* White for cards */
