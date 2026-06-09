@@ -1148,6 +1148,21 @@ p {
   padding: 8px;
 }
 
+.issue-repo-name {
+  font-weight: 600;
+  color: var(--color-primary-dark)
+}
+
+.issue-number {
+    color: var(--color-primary-dark);
+}
+
+.issue-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
 /* Subtle row hover interactive animations */
 .issue-item {
   transition: background-color 0.15s ease;
@@ -1161,7 +1176,7 @@ p {
   background-color: #f6f8fa;
 }
 
-.issue-item:hover .issue-title {
+.issue-item:hover .issue-title, .issue-item:hover .issue-repo-name, .issue-item:hover .issue-number {
   color: var(--color-accent);
 }
 

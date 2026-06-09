@@ -121,11 +121,11 @@ export async function loadGitHubIssues(containerId) {
                             <div class="issue-card-content">
                             
                             <div class="issue-meta" style="display: flex; justify-content: space-between; font-size: 0.85rem; color: #586069;">
-                                <span class="issue-repo-name" style="font-weight: 600; color: var(--color-primary-dark)">${repoName}</span>
-                                <span class="issue-number" style="color: var(--color-primary-dark)">#${issue.number}</span>
+                                <span class="issue-repo-name">${repoName}</span>
+                                <span class="issue-number">#${issue.number}</span>
                             </div>
                             
-                            <div class="issue-title" style="font-size: 0.95rem; font-weight: 500; line-height: 1.4;">
+                            <div class="issue-title">
                                 ${issue.title}
                             </div>
                             
