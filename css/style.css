@@ -1138,13 +1138,14 @@ p {
   max-height: 480px;
   overflow-y: auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  padding: 4px;
+  padding: 8px;
 }
 
 .issue-card-content {
   display: flex;
   flex-direction: column;
   gap: 2px;
+  padding: 8px;
 }
 
 /* Subtle row hover interactive animations */
@@ -1154,6 +1155,14 @@ p {
   border-bottom: 1px;
   border-color: solid #f1f1f1; 
   padding: 2px 1px;
+}
+
+.issue-item:hover {
+  background-color: #f6f8fa;
+}
+
+.issue-item:hover .issue-title {
+  color: var(--color-accent);
 }
 
 /* Text status indicators */

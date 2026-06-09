@@ -100,7 +100,7 @@ export async function loadGitHubIssues(containerId) {
                             <span class="issue-tag-badge" style="
                                 background-color: ${bgColor}; 
                                 color: ${textColor}; 
-                                padding: 4px 4px; 
+                                padding: 6px; 
                                 border-radius: 20px; 
                                 font-size: 0.72rem; 
                                 font-weight: 600; 
