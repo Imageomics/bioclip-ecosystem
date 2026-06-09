@@ -37,18 +37,21 @@
                     <span class="guide-icon"><i data-lucide="spotlight"></i></span>
                     <h3 class="guide-title">State-of-the-Art (Huge)</h3>
                     <p class="guide-desc">I need the latest model with the highest accuracy (ViT-H/14) and emergent biological capabilities. Speed and size are not an issue.</p>
+                    <p class="guide-specs">986M params · 3.9 GB fp32 · 325 GFLOPs/image</p>
                     <a href="#bioclip-2.5-huge" class="guide-link">Go to BioCLIP 2.5 Huge &rarr;</a>
                 </div>
                 <div class="guide-card">
                     <span class="guide-icon"><i data-lucide="rocket"></i></span>
                     <h3 class="guide-title">State-of-the-Art (Large)</h3>
                     <p class="guide-desc">I have inference speed or size constraints, but need the latest model with the highest accuracy (ViT-L/14) and emergent biological capabilities.</p>
+                    <p class="guide-specs">428M params · 1.7 GB fp32 · 155 GFLOPs/image</p>
                     <a href="#bioclip-2" class="guide-link">Go to BioCLIP 2 &rarr;</a>
                 </div>
                 <div class="guide-card">
                     <span class="guide-icon"><i data-lucide="captions"></i></span>
                     <h3 class="guide-title">Trained with Captions</h3>
                     <p class="guide-desc">I need a ViT-B/16 model for inference speed or direct comparison; looking for base model trained with captions and taxonomic labels.</p>
+                    <p class="guide-specs">150M params · 0.6 GB fp32 · 34 GFLOPs/image</p>
                     <!--want to try BioCAP, the original BioCLIP model, but trained with captions and taxonomic labels-->
                     <a href="#biocap" class="guide-link">Go to BioCAP &rarr;</a>
                 </div>
@@ -56,6 +59,7 @@
                     <span class="guide-icon"><i data-lucide="save"></i></span>
                     <h3 class="guide-title">Original</h3>
                     <p class="guide-desc">I need the original BioCLIP ViT-B/16 model described in the 2024 CVPR paper.</p>
+                    <p class="guide-specs">150M params · 0.6 GB fp32 · 34 GFLOPs/image</p>
                     <a href="#bioclip" class="guide-link">Go to BioCLIP &rarr;</a>
                 </div>
                 <div class="guide-card">
@@ -88,6 +92,13 @@
                         <li><strong>Training Data:</strong> 233 Million images (TreeOfLife-200M)</li>
                         <li><strong>Best for:</strong> High-accuracy tasks, fine-grained trait analysis, zero-shot learning, no inference speed or memory constraints.</li>
                     </ul>
+                    <div class="spec-grid">
+                        <div class="spec-chip"><span class="spec-value">986M</span><span class="spec-label">parameters</span></div>
+                        <div class="spec-chip"><span class="spec-value">3.9 GB</span><span class="spec-label">memory (fp32)</span></div>
+                        <div class="spec-chip"><span class="spec-value">325</span><span class="spec-label">GFLOPs / image<sup>*</sup></span></div>
+                        <div class="spec-chip"><span class="spec-value">47</span><span class="spec-label">GFLOPs / label<sup>*</sup></span></div>
+                    </div>
+                    <a href="#reading-specs" class="spec-grid-link">How to read these specs &darr;</a>
                     <a href="https://imageomics.github.io/bioclip-2/" class="btn btn-primary">Visit BioCLIP 2 Site</a>
                     <a href="https://huggingface.co/imageomics/bioclip-2.5-vith14" class="btn btn-outline ml-2">Model Card</a>
                     <a href="https://doi.org/10.48550/arXiv.2505.23883" class="btn btn-outline ml-2">Read Paper</a>
@@ -117,6 +128,13 @@
                         <li><strong>Training Data:</strong> 214 Million images (TreeOfLife-200M, Revision <a href="https://huggingface.co/datasets/imageomics/TreeOfLife-200M/tree/a8f38b4388579862c56ae57d6f094c2ac0e92e12" target="_blank">a8f38b4</a>)</li>
                         <li><strong>Best for:</strong> High-accuracy tasks, fine-grained trait analysis, zero-shot learning when size or inference speed are constrained.</li>
                     </ul>
+                    <div class="spec-grid">
+                        <div class="spec-chip"><span class="spec-value">428M</span><span class="spec-label">parameters</span></div>
+                        <div class="spec-chip"><span class="spec-value">1.7 GB</span><span class="spec-label">memory (fp32)</span></div>
+                        <div class="spec-chip"><span class="spec-value">155</span><span class="spec-label">GFLOPs / image<sup>*</sup></span></div>
+                        <div class="spec-chip"><span class="spec-value">13</span><span class="spec-label">GFLOPs / label<sup>*</sup></span></div>
+                    </div>
+                    <a href="#reading-specs" class="spec-grid-link">How to read these specs &darr;</a>
                     <a href="https://imageomics.github.io/bioclip-2/" class="btn btn-primary">Visit BioCLIP 2 Site</a>
                     <a href="https://huggingface.co/imageomics/bioclip-2" class="btn btn-outline ml-2">Model Card</a>
                     <a href="https://doi.org/10.48550/arXiv.2505.23883" class="btn btn-outline ml-2">Read Paper</a>
@@ -146,6 +164,13 @@
                         <li><strong>Best for:</strong> General purpose baselines (ViT-B/16 needed, for inference speed or direct comparison), caption generation pipelines, reproducing paper results.
                         </li>
                     </ul>
+                    <div class="spec-grid">
+                        <div class="spec-chip"><span class="spec-value">150M</span><span class="spec-label">parameters</span></div>
+                        <div class="spec-chip"><span class="spec-value">0.6 GB</span><span class="spec-label">memory (fp32)</span></div>
+                        <div class="spec-chip"><span class="spec-value">34</span><span class="spec-label">GFLOPs / image<sup>*</sup></span></div>
+                        <div class="spec-chip"><span class="spec-value">6</span><span class="spec-label">GFLOPs / label<sup>*</sup></span></div>
+                    </div>
+                    <a href="#reading-specs" class="spec-grid-link">How to read these specs &darr;</a>
                     <a href="https://imageomics.github.io/biocap/" class="btn btn-primary">Visit BioCAP Site</a>
                     <a href="https://huggingface.co/imageomics/biocap" class="btn btn-outline ml-2">Model Card</a>
                     <a href="https://arxiv.org/abs/2510.20095" class="btn btn-outline ml-2">Read Paper</a>
@@ -174,6 +199,13 @@
                         <li><strong>Training Data:</strong> 10 Million images (TreeOfLife-10M)</li>
                         <li><strong>Best for:</strong> Reproducing original paper results.</li>
                     </ul>
+                    <div class="spec-grid">
+                        <div class="spec-chip"><span class="spec-value">150M</span><span class="spec-label">parameters</span></div>
+                        <div class="spec-chip"><span class="spec-value">0.6 GB</span><span class="spec-label">memory (fp32)</span></div>
+                        <div class="spec-chip"><span class="spec-value">34</span><span class="spec-label">GFLOPs / image<sup>*</sup></span></div>
+                        <div class="spec-chip"><span class="spec-value">6</span><span class="spec-label">GFLOPs / label<sup>*</sup></span></div>
+                    </div>
+                    <a href="#reading-specs" class="spec-grid-link">How to read these specs &darr;</a>
                     <a href="https://imageomics.github.io/bioclip/" class="btn btn-primary">Visit BioCLIP Site</a>
                     <a href="https://huggingface.co/imageomics/bioclip" class="btn btn-outline ml-2">Model Card</a>
                     <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Stevens_BioCLIP_A_Vision_Foundation_Model_for_the_Tree_of_Life_CVPR_2024_paper.html" class="btn btn-outline ml-2">Read Paper</a>
@@ -182,6 +214,54 @@
                     <img src="../images/bioclip-hook.svg" alt="BioCLIP model visualization showing the model architecture" loading="lazy" style="max-width:100%;max-height:100%;display:block;object-fit:contain;">
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="reading-specs" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">How to read the specs</h2>
+            <p style="max-width:760px;margin:0 auto var(--spacing-md);text-align:center;color:var(--color-text-muted);">
+                Each model above lists a few properties intrinsic to the model so you can ballpark what
+                you are working with before committing to a full benchmark.
+            </p>
+            <ul class="feature-list" style="max-width:760px;margin:0 auto var(--spacing-md);">
+                <li><strong>Parameters:</strong> the model size. Larger models are generally heavier and slower to run.</li>
+                <li><strong>Memory (fp32):</strong> the footprint of the weights at full precision, as distributed on Hugging Face. This is the on-disk size and a lower bound on the RAM or VRAM needed to load the model (activations add more at inference).</li>
+                <li><strong>GFLOPs / image:</strong> the work the vision encoder does for a single image. This sets how fast you can identify or embed a batch of photos.</li>
+                <li><strong>GFLOPs / label:</strong> the work the text encoder does to match a photo against one candidate name (for example, a single species). Open-ended identification checks many names, so this cost grows with the number of candidates you compare against. Comparing a photo to a name once it is encoded is negligible and is omitted.</li>
+            </ul>
+            <p style="max-width:760px;margin:0 auto var(--spacing-sm);color:var(--color-text-muted);">
+                <strong>Rough throughput estimate</strong>
+            </p>
+            <p style="max-width:760px;margin:0 auto var(--spacing-md);color:var(--color-text-muted);">
+                Use this only for a ballpark, order-of-magnitude estimate. Start with a rough sustained
+                effective compute rate for your hardware, then divide by the model's vision GFLOPs/image.
+                Measured throughput can be much lower.
+            </p>
+            <div class="code-block" style="max-width:760px;margin:0 auto var(--spacing-md);">images/sec upper bound  &asymp;  sustained effective GFLOP/s  &divide;  vision GFLOPs per image</div>
+            <p style="max-width:760px;margin:0 auto var(--spacing-sm);color:var(--color-text-muted);">
+                Real throughput depends on batching, hardware utilization, model precision, available RAM/VRAM,
+                image loading and preprocessing, framework overhead, and whether text label embeddings are cached.
+                The ranges below are intentionally broad and overlapping.
+            </p>
+            <ul class="feature-list" style="max-width:760px;margin:0 auto var(--spacing-md);">
+                <li><strong>Laptop CPU:</strong> roughly 100 to 500 effective GFLOP/s</li>
+                <li><strong>Desktop or workstation CPU:</strong> roughly 300 to 2,000 effective GFLOP/s</li>
+                <li><strong>Integrated local accelerator:</strong> roughly 1,000 to 10,000 effective GFLOP/s, including unified-memory systems such as Apple M-series</li>
+                <li><strong>Discrete local GPU:</strong> roughly 5,000 to 50,000 effective GFLOP/s, including laptop and workstation GPUs</li>
+                <li><strong>Datacenter GPU:</strong> roughly 50,000 to 300,000 effective GFLOP/s</li>
+            </ul>
+            <p style="max-width:760px;margin:0 auto var(--spacing-md);color:var(--color-text-muted);">
+                For example, at 10,000 effective GFLOP/s, BioCLIP 2 has an upper-bound estimate of
+                10,000 &divide; 155 &asymp; 65 images/sec before overhead.
+            </p>
+            <p style="max-width:760px;margin:0 auto;font-size:0.85rem;color:var(--color-text-muted);">
+                <sup>*</sup> A count of the operations in one forward pass (FLOPs, roughly twice the number of
+                multiply-accumulate operations), computed for a single 224&times;224-pixel image through the vision
+                encoder and for a single label through the text encoder. It reflects the work the model does, not
+                wall-clock speed, and shifts by a few percent depending on the counting tool; cross-checked against
+                <a href="https://github.com/mlfoundations/open_clip/blob/main/docs/model_profile.csv" target="_blank">OpenCLIP's published model profile</a>.
+            </p>
         </div>
     </section>
 

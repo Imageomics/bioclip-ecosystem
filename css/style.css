@@ -454,6 +454,13 @@ a:hover {
     flex-grow: 1;
 }
 
+.guide-specs {
+    margin-bottom: var(--spacing-sm);
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+}
+
 .guide-link {
     font-weight: 600;
     font-size: 0.9rem;
@@ -797,6 +804,48 @@ a:hover {
     position: absolute;
     left: 0;
     font-weight: bold;
+}
+
+/* Intrinsic model specs: compact grid of labeled stat "chips" */
+.spec-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xs);
+    margin: var(--spacing-sm) 0 var(--spacing-xs);
+}
+
+.spec-grid-link {
+    display: block;
+    margin-bottom: var(--spacing-md);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.spec-chip {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 0.75rem 1rem;
+}
+
+.spec-chip .spec-value {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    line-height: 1.2;
+}
+
+.spec-chip .spec-label {
+    display: block;
+    margin-top: 0.15rem;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+}
+
+.spec-chip .spec-label sup {
+    color: var(--color-primary);
 }
 
 .code-block {
