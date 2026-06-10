@@ -677,7 +677,7 @@ a:hover {
 }
 
 .img-emb-explorer {
-    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #d946ef 100%);
+    background: linear-gradient(135deg, var(--color-data-secondary) 0%, #a855f7 50%, #d946ef 100%);
 }
 
 /* Icon display for component images */
@@ -755,8 +755,8 @@ a:hover {
 }
 
 .tag.search {
-    background-color: #f3e8ff;
-    color: #7c3aed;
+    background-color: #f8e7fa;
+    color: var(--color-data-secondary);
 }
 
 .tag.community {
@@ -777,6 +777,11 @@ a:hover {
 .tag.software {
     background-color: #9ccb5e58;
     color: var(--color-secondary);
+}
+
+.tag.pybioclip {
+    background-color: #10b98181; /* pybioclip color with moderate opacity */
+    color: #053e2b;
 }
 
 .component-text p {
