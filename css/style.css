@@ -725,7 +725,7 @@ a:hover {
     display: inline-block;
     padding: 0.25rem 0.5rem;
     background-color: #0097b241;
-    color: var(--color-bioclip);
+    color: var(--color-bioclip-text);
     border-radius: 4px;
     font-size: 0.75rem;
     font-weight: 700;
@@ -736,7 +736,7 @@ a:hover {
 
 .tag.new {
     background-color: #10b98143;
-    color: var(--color-bioclip-2);
+    color: var(--color-bioclip-2-text);
 }
 
 .tag.bioclip2 {
