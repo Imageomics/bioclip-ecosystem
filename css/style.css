@@ -1176,3 +1176,66 @@ p {
         height: 140px;
     }
 }
+
+/** Issue List Box Style */
+
+/* Container wrap layout */
+.issue-box-container {
+  border: 1px solid #e1e4e8;
+  border-radius: 4px;
+  background-color: #ffffff;
+  max-height: 480px;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 8px;
+}
+
+.issue-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px;
+}
+
+.issue-repo-name {
+  font-weight: 600;
+  color: var(--color-primary-dark)
+}
+
+.issue-number {
+    color: var(--color-primary-dark);
+}
+
+.issue-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Subtle row hover interactive animations */
+.issue-item {
+  transition: background-color 0.15s ease;
+  border-radius: 4px;
+  border-bottom: 1px;
+  border-color: solid #f1f1f1; 
+  padding: 2px 1px;
+}
+
+.issue-item:hover {
+  background-color: #f6f8fa;
+}
+
+.issue-item:hover .issue-title, .issue-item:hover .issue-repo-name, .issue-item:hover .issue-number {
+  color: var(--color-accent);
+}
+
+/* Text status indicators */
+.issue-loading, .issue-empty, .issue-error {
+  text-align: center;
+  color: #586069;
+  font-style: italic;
+  padding: 32px 0;
+}
+.issue-error {
+  color: #cb2431;
+}
