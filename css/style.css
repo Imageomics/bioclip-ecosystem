@@ -644,7 +644,7 @@ a:hover {
 }
 
 .img-models {
-    background: linear-gradient(135deg, var(--color-models-primary) 0%, rgba(112, 183, 227, 0.467) 100%); /* Imageomics Blue gradient */
+    background: linear-gradient(135deg, var(--color-models-primary) 0%, rgba(33, 153, 228, 0.467) 100%); /* Imageomics Blue gradient */
     color: white;
 }
 
