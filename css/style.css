@@ -344,15 +344,15 @@ a:hover {
     transform: translateY(-1px);
 }
 
-.btn-primary-community {
-    background-color: var(--color-community-primary);
+.btn-primary-models {
+    background-color: var(--color-models-primary);
     color: white;
-    border: 2px solid var(--color-community-primary);
+    border: 2px solid var(--color-models-primary);
 }
 
-.btn-primary-community:hover {
-    background-color: var(--color-community-secondary);
-    border-color: var(--color-community-secondary);
+.btn-primary-models:hover {
+    background-color: var(--color-models-secondary);
+    border-color: var(--color-models-secondary);
     text-decoration: none;
     color: white;
     transform: translateY(-1px);
@@ -644,7 +644,7 @@ a:hover {
 }
 
 .img-models {
-    background: linear-gradient(135deg, var(--color-primary) 0%, #0097b250 100%);
+    background: linear-gradient(135deg, var(--color-models-primary) 0%, rgba(112, 183, 227, 0.467) 100%); /* Imageomics Blue gradient */
     color: white;
 }
 
@@ -659,7 +659,7 @@ a:hover {
 }
 
 .img-community {
-    background: linear-gradient(135deg, var(--color-community-primary) 0%, rgba(55, 111, 145, 0.467) 100%); /* Imageomics Blue gradient */
+    background: linear-gradient(135deg, var(--color-primary) 0%, #0097b250 100%);
     color: white;
 }
 
@@ -760,8 +760,8 @@ a:hover {
 }
 
 .tag.community {
-    background-color: #dbeafe;
-    color: var(--color-community-primary); /* Imageomics Blue with reduced opacity */
+    background-color: #0097b234;
+    color: var(--color-primary);
 }
 
 .tag.data {
@@ -770,8 +770,8 @@ a:hover {
 }
 
 .tag.models {
-    background-color: #0097b234;
-    color: var(--color-primary-dark);
+    background-color: #dbeafe;
+    color: var(--color-models-primary);  /* Imageomics Blue with reduced opacity */
 }
 
 .tag.software {
