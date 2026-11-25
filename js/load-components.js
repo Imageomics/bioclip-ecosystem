@@ -44,7 +44,9 @@
         const currentPath = window.location.pathname;
 
         const logoLink = headerElement.querySelector('#logo-link');
-        if (logoLink) logoLink.href = rootPath + 'index.html';
+        // Link to the directory root (not index.html) so the URL stays clean;
+        // GitHub Pages serves index.html automatically for directory requests.
+        if (logoLink) logoLink.href = rootPath;
 
         const desktopNav      = headerElement.querySelector('.nav-links');
         const mobileContainer = headerElement.querySelector('.mobile-nav .container');
